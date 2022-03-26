@@ -63,6 +63,7 @@ body{ margin: 0;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 8%
 }
 
 .slogan{
