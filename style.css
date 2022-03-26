@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Red+Hat+Display&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{ margin: 0;
+    padding: 0;
+    display: block;
+    scroll-behavior: smooth;
+}
+
+
+.inicio{
+    background-image: url(fundo.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.quem_somos {
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    width: 100%;
+    height: 90px;
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.navbar {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    column-gap: 24px;
+
+}
+
+.navbar a{
+    text-decoration: none;
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
+    font-size: 24px;
+}
+
+.nelogo{
+    height: 60px;
+}
+
+.parte_baixo{   
+    width: 100%;
+    height: calc(96vh - 90px);
+    display: flex;
+    float: right;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slogan{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 30px;
+    font-family: 'Red Hat Display', sans-serif;
+    align-self: flex-start;
+    margin-left: 12%;
+}
+
+.div_btn{
+    display: flex;
+    column-gap: 100px
+}
+
+.btn_inicio{
+    background-color: rgba(240, 248, 255, 0);
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    font-family: 'Red Hat Display', sans-serif;
+    border: 2px #0282F8 solid;
+    border-radius: 20px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.btn_inicio:hover{
+    background-color:#0281f87c ;
+
+}
