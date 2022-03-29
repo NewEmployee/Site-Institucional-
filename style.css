@@ -5,10 +5,12 @@ html{
 }
 
 
-body{ margin: 0;
+body{ 
+    margin: 0;
     padding: 0;
     display: block;
     scroll-behavior: smooth;
+
 }
 
 
@@ -32,7 +34,7 @@ body{ margin: 0;
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 
@@ -41,7 +43,7 @@ body{ margin: 0;
     list-style: none;
     flex-direction: row;
     column-gap: 24px;
-
+    
 }
 
 .navbar a{
@@ -50,6 +52,7 @@ body{ margin: 0;
     color: white;
     font-size: 24px;
 }
+
 
 .nelogo{
     height: 60px;
@@ -109,20 +112,17 @@ body{ margin: 0;
 
 }
 
-.div_titulo_qs{
-    width: 100%;
+.titulo_qs{
+    width:80vw;
     height: 28%;
     font-size: 46px;
     font-family: 'Red Hat Display', sans-serif;
     color: black;
     align-items: flex-end;
     display: flex;
-   
-}
-
-.titulo_qs{
     margin-left: 10%;
 }
+
 
 .conteudo_qs{
     display: flex;
@@ -130,5 +130,72 @@ body{ margin: 0;
     font-size: 18px;
     font-family: 'Red Hat Display', sans-serif;
     color: black;
+
+}
+
+.simulador {
+    max-height: 100vh;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.vec_simulador{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.header_simulador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    height: 10%;
+}
+
+.titulo_simulador {
+
+    font-size: 46px;
+    font-family: 'Red Hat Display', sans-serif;
+    color: black;
+    
+}
+
+.conteudo_simulador {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+    font-family: 'Red Hat Display', sans-serif;
+    color: black;
+}
+
+.texto_simulador {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn_simulador{ 
+    color: black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    font-family: 'Red Hat Display', sans-serif;
+    border: 2px #0282F8 solid;
+    border-radius: 20px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 10%;
+    
+}
+
+.btn_simulador:hover{
+    background-color:#0281f87c ;
 
 }
