@@ -199,3 +199,166 @@ body{
     background-color:#0281f87c ;
 
 }
+
+.valores {
+    max-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.titulos_pg {
+
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 79px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.conteudo_vl {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+
+    color: #363636;
+}
+
+.confianca {
+    width: 300px;
+    height: 415px;
+    float: left;
+
+    background: #FFFFFF;
+    border: 2px solid rgba(50, 50, 50, 0.2);
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.inovacao {
+    width: 300px;
+    height: 415px;
+    float: left;
+    
+
+    background: #FFFFFF;
+    border: 2px solid rgba(50, 50, 50, 0.2);
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.paixao {
+    width: 300px;
+    height: 415px;
+    float: right;
+    
+
+    background: #FFFFFF;
+    border: 2px solid rgba(50, 50, 50, 0.2);
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.div_img_valor {
+    width: 270px;
+    height: 200px;
+    left: 71px;
+    margin: 13px;
+
+    background: #F2F2F2;
+    border-radius: 40px;
+}
+
+.imagens_valor {
+    width: 200px;
+    height: 180px;
+}
+
+#imagem_paixao {
+    width: 250px;
+}
+
+#imagem_inovacao {
+    margin-top: 10px;
+}
+
+.titulo_valor {
+    font-family: 'Franklin Gothic Medium';
+    font-style: normal;
+    font-size: 27px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.conteudo_valor {
+    width: 260px;
+    height: 90px;
+
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.forma_Azul {
+    width: 100px;
+    height: 28px;
+    float: left;
+    margin-top: 18px;
+    margin-left: 30px;
+
+    background: #0282F8;
+    border-radius: 40px;
+}
+
+.palavra_forma_Azul {
+    text-align: center;
+    font-family: 'Red Hat Display';
+    margin-top: 3px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.equipe {
+    max-height: 150vh;
+    height: 150vh;
+    width: 100%;
+    text-align: center;
+}
+
+.div_cabecalho_equipe {
+    height: 150%;
+    width: 100%;
+    margin: 0px;
+}
+
+.div_fundo_equipe {
+    background:url(fundo_equipe.png);
+    height: 35%;
+    width: 100%;
+    background-size: cover;
+}
+
+.titulo_eq {
+    margin-top: 20px;
+}
+
+.container_valores {
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_titulo_equipe {
+    display: flex;
+    justify-content: center;
+    
+}
