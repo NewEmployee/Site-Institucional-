@@ -336,29 +336,102 @@ body{
 }
 
 .div_cabecalho_equipe {
-    height: 150%;
+    height: 250vh;
     width: 100%;
     margin: 0px;
 }
 
 .div_fundo_equipe {
-    background:url(fundo_equipe.png);
-    height: 35%;
-    width: 100%;
+    background-image:url(fundo_equipe.png);
     background-size: cover;
-}
-
-.titulo_eq {
-    margin-top: 20px;
+    height: 30%;
+    width: 100%;
 }
 
 .container_valores {
     display: flex;
     justify-content: space-around;
+    
 }
 
-.div_titulo_equipe {
+#div_titulo_equipe {
+    color: white;
+}
+
+#conteudo_equipe {
+    margin-top: 5%;
+    color: white;
+    font-size: 23px;
+}
+
+.palavra_Equipe {
+    justify-content: center;
+}
+
+.div_cabecalho_equipe .forma_Azul {
+    width: 250px;
+    height: 50px;
+    color: white;
+}
+
+.container_equipe {
+    height: 5vh;
     display: flex;
     justify-content: center;
-    
+}
+
+.container_Fotos {
+    height: 5vh;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+.container_Fotos2 {
+    height: 5vh;
+    margin-top: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.equipe_fotos {
+    width: 260px;
+    height: 350px;
+
+    background: #FFFFFF;
+    border: 2px solid rgba(50, 50, 50, 0.2);
+    box-sizing: border-box;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.contate_Nos {
+    margin-top: 55%;
+    background-image: url(Fundo_Contatinos.png);
+    background-size: cover;
+    height: 150vh;
+    width: 100%;
+}
+
+.titulo_Contatenos {
+    width: 551.41px;
+    height: 69px;
+    margin-left: 8%;
+
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 79px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.subtitulo_Contatenos {
+    background-image: url(Empresa.png);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 41px;
+    margin-left: 64%;
+    margin-top: 9%;
 }
