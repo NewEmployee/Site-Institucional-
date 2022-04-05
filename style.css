@@ -43,7 +43,6 @@ body{
     list-style: none;
     flex-direction: row;
     column-gap: 24px;
-    
 }
 
 .navbar a{
@@ -434,4 +433,23 @@ body{
     height: 41px;
     margin-left: 64%;
     margin-top: 9%;
+}
+
+.ul_imagens_link{
+    width: 180px;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.azulado {
+    width: 35px;
+    height: 35px;
+    background-color: #0281f89d;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
