@@ -7,7 +7,7 @@ html{
 
 body{ 
     margin: 0;
-    padding: 0;
+    padding: 0;     
     display: block;
     scroll-behavior: smooth;
 
@@ -15,9 +15,9 @@ body{
 
 
 .inicio{
-    background-image: url(fundo.png);
+    background-image: url(img/fundo.png);
     background-size: cover;
-    height: 100vh;
+    height: 100vh;  
     width: 100%;
 }
 
@@ -34,6 +34,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
+    z-index: 1;
     transition: 1s;
 }
 
@@ -126,7 +127,7 @@ body{
 .conteudo_qs{
     display: flex;
     justify-content: space-evenly;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Red Hat Display', sans-serif;
     color: black;
 
@@ -166,7 +167,7 @@ body{
 .conteudo_simulador {
     display: flex;
     justify-content: space-evenly;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Red Hat Display', sans-serif;
     color: black;
 }
@@ -174,12 +175,13 @@ body{
 .texto_simulador {
     display: flex;
     flex-direction: column;
-    
+    height: 100%;
+    margin-top: 6%;
 }
 
-.btn_simulador{ 
+.btn{ 
     color: black;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
     font-size: 24px;
     font-family: 'Red Hat Display', sans-serif;
     border: 2px #0282F8 solid;
@@ -194,7 +196,7 @@ body{
     
 }
 
-.btn_simulador:hover{
+.btn:hover{
     background-color:#0281f87c ;
 
 }
@@ -204,6 +206,7 @@ body{
     height: 100vh;
     width: 100%;
     text-align: center;
+    margin-top: 10%;
 }
 
 .titulos_pg {
@@ -341,7 +344,7 @@ body{
 }
 
 .div_fundo_equipe {
-    background-image:url(fundo_equipe.png);
+    background-image:url(img/fundo_equipe.png);
     background-size: cover;
     height: 30%;
     width: 100%;
@@ -405,7 +408,7 @@ body{
 
 .contate_Nos {
     margin-top: 55%;
-    background-image: url(Fundo_Contatinos.png);
+    background-image: url(img/Fundo_Contatinos.png);
     background-size: cover;
     height: 150vh;
     width: 100%;
@@ -427,7 +430,7 @@ body{
 }
 
 .subtitulo_Contatenos {
-    background-image: url(Empresa.png);
+    background-image: url(img/Empresa.png);
     background-repeat: no-repeat;
     width: 300px;
     height: 41px;
@@ -452,4 +455,178 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.nossos_servicos {
+    max-height: 200vh;
+    height: 200vh;
+    width: 100%;
+
+}
+
+.vec1_servicos{
+    position:absolute;
+    z-index: -1;
+    right: 0;
+    height: 100vh;
+}
+.vec2_servicos{
+    position:absolute;
+    margin-top: 45%;
+    z-index: -1;
+    height: 100vh;
+}
+.lampada{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    height: 50px;
+}
+
+.titulo_servicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.titulo_servicos b{
+    font-size: 46px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.titulo_servicos span{
+    font-size: 24px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+.produtividade {
+    width: 70%;
+    height: 26%;
+    margin-left: 15%;
+    border: 2px #dddddd solid;
+    border-radius: 16px;
+    position: relative;
+}
+
+.img_produtividade {
+    float: left;
+    width: 40%;
+    background-color:#F2F2F2;
+    border: 2px #F2F2F2 solid;
+    border-radius: 16px;
+    height: 100%;
+}
+
+.txt_produtividade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.txt_produtividade b {
+    font-size: 44px;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-top: 2%;
+}
+
+.txt_produtividade span {
+    font-size: 22px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+.doencas {
+    width: 70%;
+    height: 26%;
+    margin-left: 15%;
+    border: 2px #dddddd solid;
+    border-radius: 16px;
+    margin-top: 5%;
+    position: relative;
+}
+
+.coracao{
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    height: 50px;
+}
+
+.img_doencas {
+    float: right;
+    width: 46%;
+    background-color:#F2F2F2;
+    border: 2px #F2F2F2 solid;
+    border-radius: 16px;
+    height: 100%;
+}
+
+.txt_doencas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.txt_doencas b {
+    font-size: 44px;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-top: 2%;
+}
+
+.txt_doencas span {
+    font-size: 22px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+.ambiente {
+    width: 70%;
+    height: 26%;
+    margin-left: 15%;
+    border: 2px #dddddd solid;
+    border-radius: 16px;
+    margin-top: 5%;
+    position: relative;
+
+}
+
+.agenda{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    height: 50px;
+}
+
+.img_ambiente {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color:#F2F2F2;
+    border: 2px #F2F2F2 solid;
+    border-radius: 16px;
+}
+
+.txt_ambiente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.txt_ambiente b {
+    font-size: 44px;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-top: 2%;
+}
+
+.txt_ambiente span {
+    font-size: 22px;
+    font-family: 'Red Hat Display', sans-serif;
 }
