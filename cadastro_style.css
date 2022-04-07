@@ -248,16 +248,13 @@ body {
 
     button:hover {
         background-color:#0282F8;
-        transition: 0.5s;
-    }
-
-    button:hover {
         transition: 1s;
         width: 12%;
         margin-left: 43%;
         
-
     }
+
+    
 
 
 
