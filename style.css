@@ -16,7 +16,7 @@ body{
 
 /* Tela inicial e Header */ 
 .inicio{
-    background-image: url(img/fundo.png);
+    background-image: url(img/site/fundo.png);
     background-size: cover;
     height: 100vh;  
     width: 100%;
@@ -38,6 +38,7 @@ body{
     z-index: 1;
     transition: 1s;
 }
+
 
 
 .navbar {
@@ -362,7 +363,7 @@ body{
 }
 
 .div_fundo_equipe {
-    background-image:url(img/fundo_equipe.png);
+    background-image:url(img/site/fundo_equipe.png);
     background-size: cover;
     height: 30%;
     width: 100%;
@@ -426,7 +427,7 @@ body{
 
 .contate_Nos {
     margin-top: 55%;
-    background-image: url(img/Fundo_Contatinos.png);
+    background-image: url(img/site/Fundo_Contatinos.png);
     background-size: cover;
     height: 150vh;
     width: 100%;
@@ -448,7 +449,7 @@ body{
 }
 
 .subtitulo_Contatenos {
-    background-image: url(img/Empresa.png);
+    background-image: url(img/site/Empresa.png);
     background-repeat: no-repeat;
     width: 300px;
     height: 41px;
