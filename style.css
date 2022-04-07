@@ -14,6 +14,7 @@ body{
 }
 
 
+/* Tela inicial e Header */ 
 .inicio{
     background-image: url(img/fundo.png);
     background-size: cover;
@@ -105,6 +106,11 @@ body{
 
 }
 
+
+
+
+
+/* Tela Quem Somos */
 .quem_somos {
     max-height: 100vh;
     height: 100vh;
@@ -133,6 +139,10 @@ body{
 
 }
 
+
+
+
+/* Tela Simulador Financeiro */
 .simulador {
     max-height: 100vh;
     height: 100vh;
@@ -201,6 +211,10 @@ body{
 
 }
 
+
+
+
+/* Tela Valores Da Empresa*/ 
 .valores {
     max-height: 100vh;
     height: 100vh;
@@ -330,6 +344,10 @@ body{
     font-size: 12px;
 }
 
+
+
+
+/* Tela Equipe */
 .equipe {
     max-height: 150vh;
     height: 150vh;
@@ -457,6 +475,9 @@ body{
     justify-content: center;
 }
 
+
+
+/* Tela Nossos Serviços */
 .nossos_servicos {
     max-height: 200vh;
     height: 200vh;
@@ -501,6 +522,9 @@ body{
 }
 
 
+
+
+/* Tela Produtividade*/
 .produtividade {
     width: 70%;
     height: 26%;
