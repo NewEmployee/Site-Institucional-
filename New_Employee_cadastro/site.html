@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Employee | Cadastro</title>
+    <link rel="stylesheet" href="cadastro_style.css">
+</head>
+<body>
+    
+
+    <div class="caixa_branca">
+
+        <div class="header">
+
+            <b>Cadastro</b>
+
+            <img class="img_logo" src="img/cadastro/NEcadastro.png"> 
+            
+
+            <span class="titulo"><b>New</b> Employee</span> 
+
+            <img class="img_p" src="img/cadastro/imgProdutividade.png">
+
+        </div>
+
+        <div class="informacoes">
+
+
+            <div class="input_esquerda">
+
+                <div class="div_nome">
+                    <img src="img/cadastro/input_pessoa.png" >
+                    Nome: <br>
+                    <input class="inputs" placeholder="Insira seu nome">
+                </div>
+
+                <div class="div_email">
+                    <img src="img/cadastro/email.png" style="height: 30px;">
+                    E-mail: <br>
+                    <input class="inputs" placeholder="Insira seu e-mail">
+                </div>
+
+                <div class="div_senha">
+                    <img src="img/cadastro/senha.png">
+                    Senha: <br>
+                    <input class="inputs" type="password" id="input_senha" placeholder="Insira sua senha">
+                    <input class="mostrar_senha" type="checkbox" onclick="funcao_senha()"> Mostrar
+                </div>
+
+            </div>
+
+
+            <div class="input_direita">
+
+                <div class="div_nome_empresa">
+                    <img src="img/cadastro/imgEmpresa.png" >
+                    Nome da Empresa: <br>
+                    <input class="inputs" placeholder="Insira o nome da sua empresa">
+                </div>
+
+                <div class="div_cidade">
+                    <img src="img/cadastro/imgCidade.png" >
+                   Cidade: <br>
+                    <input class="inputs" placeholder="Insira sua cidade">
+                </div>
+
+                <div class="div_cnpj">
+                    <img src="img/cadastro/cnpj.png" style="height: 35px;" >
+                    CNPJ: <br>
+                    <input class="inputs" placeholder="Insira seu CNPJ">
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <button><a href="">Cadastrar</a></button>
+
+    </div>
+
+
+
+    <div class="coluna_preta">
+
+        <div class="imagem_preta">
+            <img src="img/cadastro/ne_preto.png">
+        </div>
+
+        <div class="titulos">
+            <a>Serviços</a>
+            <a>Social</a>
+            <a>Ajuda</a>
+            <a>Jurídico</a>
+        </div>
+
+
+        <div class="sub_servicos">
+            <br>
+            <br>
+           <li><a href="">Produtividade</a></li>
+            <br>
+            <br>
+            <li><a href="">Diminuir doenças</a></li>
+            <br>
+            <br>
+
+            <li><a href="">Ambiente confortável</a></li>
+
+        </div>
+
+        <div class="sub_social">
+           <br>
+           <br>
+        <li><a href="">Facebook</a></li>
+           <br>
+           <br>
+        <li><a href="">Instagram</a></li>
+           <br>
+           <br>
+        <li><a href="">Linkedin</a></li>
+
+        </div>
+
+
+        <div class="sub_ajuda">
+            <br>
+            <br>
+         <li><a href="">Suporte</a></li>
+            <br>
+            <br>
+         <li><a href="">Contato</a></li>
+            
+         </div>
+
+
+         
+        <div class="sub_juridico">
+            <br>
+            <br>
+         <li><a href="">Termos e condições</a></li>
+            <br>
+            <br>
+         <li><a href="">Política de privacidade</a></li>
+ 
+         </div>
+
+
+    </div>
+
+    <div class="footer">
+        Copyright©NewEmployee 2022
+     </div>
+
+
+
+</body>
+</html>
+
+
+<script>
+
+    function funcao_senha() {
+
+         if (input_senha.type == "password") {
+
+         input_senha.type = "text";
+            } 
+            else {
+    input_senha.type = "password";
+  }
+         
+    }
+
+</script>
