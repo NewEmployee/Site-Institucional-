@@ -48,17 +48,24 @@ body{
     column-gap: 24px;
 }
 
+
 .navbar a{
     text-decoration: none;
     font-family: 'Red Hat Display', sans-serif;
     color: white;
     font-size: 24px;
+    transition: 0.8s;
 }
 
+.navbar a:hover{
+    font-size: 28px;
+}
 
 .nelogo{
     height: 60px;
 }
+
+
 
 .parte_baixo{   
     width: 100%;
