@@ -48,6 +48,17 @@ body{
     column-gap: 24px;
 }
 
+h1 a {
+    text-decoration: none;
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
+    font-size: 38px;
+    transition: 0.8s;
+}
+
+h1 a:hover {
+    font-size: 45px;
+}
 
 .navbar a{
     text-decoration: none;
@@ -432,38 +443,6 @@ body{
     border-radius: 40px;
 }
 
-.contate_Nos {
-    margin-top: 55%;
-    background-image: url(img/site/Fundo_Contatinos.png);
-    background-size: cover;
-    height: 150vh;
-    width: 100%;
-}
-
-.titulo_Contatenos {
-    width: 551.41px;
-    height: 69px;
-    margin-left: 8%;
-
-    font-family: 'Red Hat Display';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 79px;
-    text-align: center;
-
-    color: #000000;
-}
-
-.subtitulo_Contatenos {
-    background-image: url(img/site/Empresa.png);
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 41px;
-    margin-left: 64%;
-    margin-top: 9%;
-}
-
 .ul_imagens_link{
     width: 180px;
     display: flex;
@@ -482,7 +461,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 
 
 /* Tela Nossos Serviços */
@@ -661,4 +639,218 @@ body{
 .txt_ambiente span {
     font-size: 22px;
     font-family: 'Red Hat Display', sans-serif;
+}
+
+
+
+
+/* Contate nos */
+
+.contate_Nos {
+    max-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    margin-top: 120vh;
+
+    background-repeat: no-repeat;
+    background-image: url(img/cadastro/cadastro_fundo.png);
+    scroll-behavior: smooth;
+    font-family: 'Red Hat Display', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa_branca {
+    background: linear-gradient(108.67deg, rgba(255, 255, 255, 0.4) 2.17%, rgba(255, 255, 255, 0.20) 101.22%);
+    backdrop-filter: blur(50px);
+    border-radius: 40px;
+    height: 95vh;
+    width: 85vw;
+    border-radius: 25px;
+}
+
+.header_contate {
+    width: 100%;
+    height: 15%;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 60px;
+}
+
+.div_new_contate {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo_contate {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.img_logo_contate {
+    height: 50px;
+}
+
+.img_p_contate {
+    height: 50px;
+}
+
+.informacoes_contate {
+    height: 35%;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.input_esquerda_contate, .input_direita_contate {
+    width: 35%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div_meio_mensagem {
+    height: 25%;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.inputs_contate {
+    padding: 8px;
+    border-color: #252525;
+    border-width: 1px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+}
+
+.div_mensagem_contate {
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+
+    
+.div_nome_contate, .div_email_contate, .div_nome_empresa_contate, .div_cidade_contate, .div_cnpj_contate{
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.div_esquerda_contate {
+   display: flex;
+   align-items: center;
+   margin-bottom: 1%;
+}
+
+.input_esquerda_contate img {
+    height: 30px;
+}
+
+.input_direita_contate img {
+    height: 30px;
+}
+
+.mostrar_mensagem {
+    background-color:  #e0e0e0e8;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 6px;
+}
+
+.caixa_branca button {
+    background-color: #000000c2;
+    color: white;
+    border-radius: 19px;
+    padding: 15px;
+    width: 30%;
+    font-size: 1.2em;
+    font-weight: bold;   
+    border-style: solid;
+    border-color: black; 
+    transition: 0.5s;   
+}
+
+.header_contate a {
+    text-decoration: none;
+    color: white;
+}
+
+.caixa_branca button:hover {
+    background-color:#0282F8;
+    transition: 1s;
+    width: 25%;
+}
+
+.div_button_contate {
+    width: 40%; 
+    margin-left: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_button_contate button{ 
+    display: flex;
+    justify-content: center ;
+}
+
+
+
+
+/* Final */
+
+.final {
+    max-height: 40vh;
+    height: 40vh;
+    width: 100%;
+}
+
+.coluna_preta2 {
+    background-color: black;
+    height:100%;
+    display: flex;
+}
+
+.imagem_preta {
+    height: 100%;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
+.coluna_preta ul {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-top: 2%;
+}
+
+.titulos_final {
+    font-size: 30px;
+    list-style: none;
+    font-weight: bold;  
+}
+
+.juridico_final {
+    margin-bottom: 5.5%;
+}
+
+.footer_final {
+    width: 100%;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    display: flex;
 }
