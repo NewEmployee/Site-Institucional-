@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NE</title>
+    <link rel="stylesheet" href="simulador.css">
+    <script src="simulador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <section class="main">
+      <div class="sideBar">
+        <img id="img_logo"
+          src="https://cdn.discordapp.com/attachments/951968512044322831/953450184208175145/logo.png"
+        />
+        <p class="titulo">
+          Insira as informações para calcularmos a taxa de
+          absenteísmo para você !
+        </p>
+
+        <div class="alerta_erro">
+          <div class="card_erro" id="cardErro">
+              <span id="mensagem_erro"></span>
+          </div>
+        </div>
+
+        <h3 class="textInput"> Nome da empresa:</h3>
+        <input class="input" type="text" id="nomeE" />
+
+        <h3 class="textInput"> Quantos funcionários a empresa tem:</h3>
+        <input class="input" type="number" id="qntdFuncionario" />
+
+        <h3 class="textInput">Qual a jornada diaria em média:</h3>
+        <input class="input" type="number" id="horas" />
+
+        <h3 class="textInput"> Quantos dias trabalhados no mês:</h3>
+        <input class="input" type="number" id="diasTrabalhados" />
+
+        <h3 class="textInput"> Quantidade total de faltas no mês:</h3>
+        <input class="input" type="number" id="faltas" />
+
+        <h3 class="textInput"> Qual o total de horas perdidas no mês:
+          <div id="passar_mouse">
+            <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
+              <div id="mostrar">
+                Exemplos:<br>Atrasos, Saída antecipada,<br>Atestado de hora... 
+              </div>
+          </div>
+        </h3>
+        <input class="input" type="number" id="atrasos" />
+
+        <h3 class="textInput"> Qual a média salarial bruta:</h3>
+        <input class="input" type="number" id="mSalario" />
+
+        <button class="bntCalcular" onclick="calcular()">Calcular</button>
+
+      </div>
+
+      <section id="informacoes_Princ">
+        <div class="div_Nome">
+          <div class="div_sub_Nome">
+            <h2 class="h2_Nome" id="h2_bemvindo">New Employee</h2>
+            <h2 class="h2_Nome" id="h2_NomeEmpresa"></h2>
+          </div>
+        </div>
+
+        <div class="div_pai_info">
+            <div class="div_info">
+              <h2 class="h2_info">Horas de trabalho <br><p class="p_info" id="p_horas"></p></h2>
+              <h2 class="h2_info">Horas de abstenção <br><p class="p_info" id="p_abstencao"></p></h2>
+              <h2 class="h2_info">Valor hora <br><p class="p_info" id="p_valor"></p></h2>
+            </div>
+        </div>
+
+        <div class="div_chart" id="div_chart1">
+          <div>Porcentagem do absenteísmo antes e depois</div>
+          <canvas id="chart1"></canvas>
+        </div>
+
+        <div class="div_chart" id="div_chart2">
+          <div>Quanto perco em dinheiro</div>
+          <canvas id="chart2"></canvas>
+        </div>
+        
+        <div class="div_chart" id="div_dinheiro">
+          <div class="div_info_dinheiro"><h2>Antes</h2>
+            <div id="div_perca_antes">
+              <br>Perca em dinheiro:
+            </div>
+            <div id="div_abs_antes">
+              Taxa de absenteísmo:
+            </div>
+          </div>
+          <div class="div_info_dinheiro" id="div_info_texto"></div>
+
+          <div class="div_info_dinheiro"><h2>Depois</h2>
+            <div id="div_perca_depois">
+              <br>Perca em dinheiro:
+            </div>
+            <div id="div_abs_depois">
+              Taxa de absenteísmo:
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+   
+    
+    
+
+  </body>
+</html>
