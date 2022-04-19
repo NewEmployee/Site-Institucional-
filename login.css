@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Red+Hat+Display&display=swap');
+
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 
@@ -18,8 +21,8 @@ body {
     background: linear-gradient(108.67deg, rgba(255, 255, 255, 0.4) 2.17%, rgba(255, 255, 255, 0.20) 101.22%);
     backdrop-filter: blur(50px);
     border-radius: 40px;
-    width: 1000px;
-    height: 550px;
+    width: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,82 +31,81 @@ body {
     font-weight: bold;
 }
 
-.div1{
-    width: 100%;
-    height: 200px;
-    background-image: url(img/login/imgUser.png);
-    background-repeat: no-repeat;
-    background-size: 105px;
-    margin-top: 0;
-    margin-left: 150px;
-    margin-right: 0px;
-}
-
-.div1 h1{
-    font-weight: bold;
-    margin-left: 120px;
-    margin-top: 50px;
-    font-size: 50px;
+.header {
+    width: 96%;
+    height: 20%;
+    align-items: center;
     display: flex;
-    justify-content: baseline;
+    font-size: 60px;
+    margin-left: 10%;
+    margin-bottom: 5%;
 }
 
-.div2{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+.user {
+    height: 55px;
+    margin-left: 5%;
+}
+
+.header b {
+    margin-left: 20px;
+}
+
+.header span {
+    font-size: 40px;
+    
     
 }
 
-.imagem_new{
-    width: 200px;
+.img_logo {
+    margin-left: 20%;
     height: 50px;
-    background-image: url(img/login/unknown-removebg-preview.png);
-    background-repeat: no-repeat;
-    background-size: 200px;
-    margin-top: -80px;
-    float: left;
-    margin-left: 600px;
+  
 }
 
-.img_email{
-    background-image: url(img/login/imgEmail.png);
-    width: 60px;
-    height: 50px;
-    background-repeat: no-repeat;
-    float: left;
-    background-size: 50px;
-    margin-top: 10px;
+
+.img_p {
+        height: 30px;
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+
+
+
+
+
+.div2{  
+        height: 55%;
+        width: 100%;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;    
+        justify-content: center;
+        align-items: center;
+        
 }
 
-.img_senha{
-    background-image: url(img/login/imgMensagem.png);
-    width: 60px;
-    height: 55px;
-    background-repeat: no-repeat;
-    float: left;
-    background-size: 50px;
-    margin-top: 10px;
+.div2 img {
+    height: 35px;
 }
 
-form label {
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
-    width: 250px;
+.div2 label{
+    font-size: 26px;
+    margin-left: 1%;
 }
 
 form input{
     background: linear-gradient(108.67deg, rgba(255, 255, 255, 0.4) 2.17%, rgba(255, 255, 255, 0.20) 101.22%);
     backdrop-filter: blur(50px);
-    margin-top: 25px;
     outline: 2px solid #000000;
     border: 0;
     padding: 8px;
-    width: 500px;
-    
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
 }
+
+
 
 button {
         margin-left: 41%;
@@ -111,7 +113,7 @@ button {
         color: white;
         border-radius: 19px;
         padding: 15px;
-        width: 28%;
+        width: 30%;
         font-size: 1.2em;
         font-weight: bold;   
         border-style: solid;
@@ -123,7 +125,8 @@ button {
 button:hover {
     background-color:#0282F8;
     transition: 1s;
-    width: 22%;
+    width: 24%;
     margin-left: 43%;
+    cursor: pointer;
     
 }
