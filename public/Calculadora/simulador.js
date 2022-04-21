@@ -39,11 +39,11 @@
     p_horas.innerHTML = `${horasMes} H`
     p_abstencao.innerHTML = `${horasPerdidas} H`
     p_valor.innerHTML= `R$ ${salarioHora.toFixed(2)}`
-    div_perca_antes.innerHTML = `<br>Perca em dinheiro: R$ ${perca_antes.toFixed(2)}`
-    div_perca_depois.innerHTML = `<br>Perca em dinheiro: R$ ${perca_depois.toFixed(2)}`
+    div_perca_antes.innerHTML = `Perca em dinheiro: R$ ${perca_antes.toFixed(2)}`
+    div_perca_depois.innerHTML = `Perca em dinheiro: R$ ${perca_depois.toFixed(2)}`
     div_abs_antes.innerHTML = `Taxa de absenteísmo: ${indice.toFixed(2)} %`
     div_abs_depois.innerHTML = `Taxa de absenteísmo: ${indice_depois.toFixed(2)} %`
-    div_info_texto.innerHTML = `Lembrando que nossos<br>serviços podem diminuir<br>em até 60% do absenteísmo.`
+    div_info_texto.innerHTML = `<br> Nossos serviços podem diminuir<br>em até 60% do absenteísmo.`
 
     document.getElementById("informacoes_Princ").style.visibility = 'visible';
 
@@ -62,11 +62,11 @@
       label: 'Absenteísmo',
       data: [indice, indice_depois],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(0, 150 ,255, 0.2)'
+        'rgba(255, 51, 51, 0.4)',
+        'rgba(0, 150 ,255, 0.4)'
       ],
       borderColor: [
-        'rgb(255, 99, 132)',
+        'rgb(0, 150 ,255,)',
         'rgb(0, 150 ,255,)'
       ],
       borderWidth: 1
@@ -103,11 +103,11 @@
       label: 'Perca',
       data: [perca_antes, perca_depois],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(0, 150 ,255, 0.2)'
+        'rgba(255, 51, 51, 0.4)',
+        'rgba(0, 150 ,255, 0.4)'
       ],
       borderColor: [
-        'rgb(255, 99, 132)',
+        'rgb(0, 150 ,255,)',
         'rgb(0, 150 ,255,)'
       ],
       borderWidth: 1

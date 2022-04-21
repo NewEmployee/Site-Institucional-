@@ -136,6 +136,8 @@ table {
   text-align: center;
   border: 1px solid #ebebeb;
   box-sizing: border-box;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 #img_logo {
@@ -209,13 +211,13 @@ input {
 .div_Nome {
   width: 30vw; 
   height: 20vh;
-  background-color: white;
   display: flex;
-
+  background-color: white;
   justify-content: center;
   align-items: center;
   border: 1px solid #ebebeb;
   box-sizing: border-box;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .div_sub_Nome {
@@ -255,12 +257,12 @@ input {
   width: 41vw; 
   height: 20vh;
   background-color: white;
-
   display: flex; 
   justify-content: space-around;
   align-items: center;
   border: 1px solid #ebebeb;
   box-sizing: border-box;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .div_info {
@@ -280,10 +282,11 @@ input {
   align-items: center;
   flex-direction: column;
   font-size: 20px;
+  
 }
 
 .p_info {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 
@@ -310,12 +313,16 @@ input {
   flex-direction: row;
   align-items: center;
   text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 20px;
 }
 
 .div_info_dinheiro {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  
 }
 
 #img_duvida {
@@ -345,4 +352,13 @@ input {
   border-top-left-radius:0px ;
   color: white;
   display: none;
+}
+
+.h2_antes {
+  color: rgb(253, 86, 86);
+}
+
+.h2_depois{
+  color: rgb(58, 137, 255);
+  
 }

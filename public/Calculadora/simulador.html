@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="simulador.css">
     <script src="simulador.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" type="imagex/png" href="icon.ico">
   </head>
 
   <body>
@@ -30,19 +31,19 @@
         <h3 class="textInput"> Nome da empresa:</h3>
         <input class="input" type="text" id="nomeE" />
 
-        <h3 class="textInput"> Quantos funcionários a empresa tem:</h3>
+        <h3 class="textInput"> Quantidade de funcionarios:</h3>
         <input class="input" type="number" id="qntdFuncionario" />
 
-        <h3 class="textInput">Qual a jornada diaria em média:</h3>
+        <h3 class="textInput">Jornada diaria em média:</h3>
         <input class="input" type="number" id="horas" />
 
-        <h3 class="textInput"> Quantos dias trabalhados no mês:</h3>
+        <h3 class="textInput"> Dias trabalhados no mês:</h3>  
         <input class="input" type="number" id="diasTrabalhados" />
 
-        <h3 class="textInput"> Quantidade total de faltas no mês:</h3>
+        <h3 class="textInput"> Total de faltas no mês:</h3>
         <input class="input" type="number" id="faltas" />
 
-        <h3 class="textInput"> Qual o total de horas perdidas no mês:
+        <h3 class="textInput"> Total de horas perdidas no mês:
           <div id="passar_mouse">
             <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
               <div id="mostrar">
@@ -86,9 +87,9 @@
         </div>
         
         <div class="div_chart" id="div_dinheiro">
-          <div class="div_info_dinheiro"><h2>Antes</h2>
+          <div class="div_info_dinheiro"><h2 class="h2_antes">Antes:</h2>
             <div id="div_perca_antes">
-              <br>Perca em dinheiro:
+              Perca em dinheiro:
             </div>
             <div id="div_abs_antes">
               Taxa de absenteísmo:
@@ -96,9 +97,9 @@
           </div>
           <div class="div_info_dinheiro" id="div_info_texto"></div>
 
-          <div class="div_info_dinheiro"><h2>Depois</h2>
+          <div class="div_info_dinheiro"><h2 class="h2_depois">Depois:</h2>
             <div id="div_perca_depois">
-              <br>Perca em dinheiro:
+              Perca em dinheiro:
             </div>
             <div id="div_abs_depois">
               Taxa de absenteísmo:
@@ -107,9 +108,5 @@
         </div>
       </section>
     </section>
-   
-    
-    
-
   </body>
 </html>
