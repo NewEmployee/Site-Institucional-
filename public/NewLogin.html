@@ -47,7 +47,7 @@
                     <span class="msg-cadastrar">Não possuí cadastro?<a href="cadastro.html">
                          <b>  Registre-se </b></a></span> 
 
-                    <button type="button">Login</button>
+                    <button onclick="entrar()" type="button">Login</button>
 
                 </form>
             </div>
@@ -99,7 +99,7 @@ fetch("/usuarios/autenticar", {
                     sessionStorage.ID_USUARIO = json.id_empresa;
 
                     setTimeout(function () {
-                        window.location = "https://www.google.com.br/";
+                        window.location = "dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

@@ -29,7 +29,7 @@ function entrar(req, res) {
     var senha = req.body.senhaServer;
 
     if (cnpj == undefined) {
-        res.status(400).send("Seu email está undefined!");
+        res.status(400).send("Seu cnpj está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
@@ -67,7 +67,7 @@ function cadastrar(req, res) {
     var cep = req.body.cepServer;
     var cidade = req.body.cidadeServer;
     var bairro = req.body.bairroServer;
-    var uf = req.body.ufServer;
+    var email = req.body.emailServer;
     var endereco = req.body.enderecoServer;
     var senha = req.body.senhaServer;
 
@@ -82,8 +82,8 @@ function cadastrar(req, res) {
         res.status(400).send("Sua cidade está undefined!");
     } else if (bairro == undefined) {
         res.status(400).send("Seu bairro está undefined!");
-    } else if (uf == undefined) {
-        res.status(400).send("Sua UF está undefined!");
+    } else if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
     } else if (endereco == undefined) {
         res.status(400).send("Seu endereço está undefined!");
     } else if (senha == undefined) {
@@ -92,7 +92,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nomeempresa, cnpj, cep, cidade, bairro, uf, endereco, senha)
+        usuarioModel.cadastrar(nomeempresa, cnpj, cep, cidade, bairro, email, endereco, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

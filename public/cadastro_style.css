@@ -96,6 +96,7 @@ body {
     border-style: solid;
     border-color: black;
     transition: 0.5s;
+    cursor: pointer;
 
 }
 
