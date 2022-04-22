@@ -7,7 +7,7 @@ body {
 }
 
 
-.login {
+.recover1{
     background-image: url(img/login/ImagemDeFundo.png);
     width: 100%;
     height: 100vh;
@@ -36,9 +36,17 @@ body {
     height: 20%;
     align-items: center;
     display: flex;
-    font-size: 60px;
+    font-size: 2em;
     margin-left: 10%;
     margin-bottom: 5%;
+}
+
+h1{
+    font-size: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .user {
@@ -120,6 +128,7 @@ button {
     border-color: black;
     transition: 0.5s;
     margin-top: 16px;
+    margin-bottom: 10px;
 
 }
 

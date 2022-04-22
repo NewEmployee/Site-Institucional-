@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="cadastro_style.css">
     <link rel="shortcut icon" type="imagex/png" href="img/icon.ico">
 </head>
+
 <body>
-    
+
 
     <div class="caixa_branca">
 
@@ -17,10 +19,10 @@
 
             <b>Cadastro</b>
 
-            <img class="img_logo" src="img/cadastro/NEcadastro.png"> 
-            
+            <img class="img_logo" src="img/cadastro/NEcadastro.png">
 
-            <span> <b>New</b> Employee</span> 
+
+            <span> <b>New</b> Employee</span>
 
             <img class="img_p" src="img/cadastro/imgProdutividade.png">
 
@@ -29,30 +31,30 @@
         <div class="informacoes">
 
 
-            
+
             <div class="row">
 
                 <div class="div_input">
-                    <img src="img/cadastro/imgEmpresa.png" >
+                    <img src="img/cadastro/imgEmpresa.png">
                     Nome da Empresa: <br>
                     <input id="input_cadastro_nomeempresa" placeholder="Insira o nome da sua empresa">
                 </div>
-                
+
                 <div class="div_input">
                     <img src="img/cadastro/cnpj.png">
                     CNPJ: <br>
                     <input id="input_cadastro_cnpj" placeholder="Insira seu CNPJ">
                 </div>
-                
+
             </div>
 
             <div class="row">
-                
+
                 <div class="div_input">
-                    <img src="img/Cadastro/cep.png" >
+                    <img src="img/Cadastro/cep.png">
                     CEP: <br>
                     <input id="input_cadastro_cep" placeholder="Insira seu CEP">
-                    
+
                 </div>
 
                 <div class="div_input">
@@ -60,13 +62,13 @@
                     Endereço <br>
                     <input id="input_cadastro_endereco" placeholder="Insira seu endereço">
                 </div>
-            </div>    
-           
+            </div>
+
 
             <div class="row">
                 <div class="div_input">
-                    <img src="img/cadastro/imgCidade.png" >
-                   Cidade: <br>
+                    <img src="img/cadastro/imgCidade.png">
+                    Cidade: <br>
                     <input id="input_cadastro_cidade" placeholder="Insira sua cidade">
                 </div>
                 <div class="div_input">
@@ -74,51 +76,37 @@
                     Bairro: <br>
                     <input id="input_cadastro_bairro" placeholder="Insira seu bairro">
                 </div>
-                
+
             </div>
 
             <div class="row">
                 <div class="div_input">
-                    <img src="img/Cadastro/uf.png" >
-                   UF: <br>
+                    <img src="img/Cadastro/uf.png">
+                    UF: <br>
                     <input id="input_cadastro_uf" placeholder="Insira sua UF">
+                    
                 </div>
-               
+
 
                 <div class="div_input">
                     <img src="img/cadastro/senha.png">
                     Senha: <br>
-                    <input type="password" id="input_cadastro_senha" placeholder="Insira sua senha">
+                    <input type="password" id="input_cadastro_senha" placeholder="Insira sua senha" 
+                    required min="8">
+                    
                 </div>
-                
-            </div>
-           
 
+            </div>
+
+            
+                <span class="msg-cadastrar">Já é cadastrado? <a href="Newlogin.html"> <b> Entrar </b></a></span>  
             <button onclick="cadastrar()">Cadastrar</button>
         </div>
 
-        
+
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <div class="coluna_preta">
 
         <div class="imagem_preta">
@@ -136,7 +124,7 @@
         <div class="sub_servicos">
             <br>
             <br>
-           <li><a href="">Produtividade</a></li>
+            <li><a href="">Produtividade</a></li>
             <br>
             <br>
             <li><a href="">Diminuir doenças</a></li>
@@ -148,15 +136,15 @@
         </div>
 
         <div class="sub_social">
-           <br>
-           <br>
-        <li><a href="">Facebook</a></li>
-           <br>
-           <br>
-        <li><a href="">Instagram</a></li>
-           <br>
-           <br>
-        <li><a href="">Linkedin</a></li>
+            <br>
+            <br>
+            <li><a href="">Facebook</a></li>
+            <br>
+            <br>
+            <li><a href="">Instagram</a></li>
+            <br>
+            <br>
+            <li><a href="">Linkedin</a></li>
 
         </div>
 
@@ -164,35 +152,36 @@
         <div class="sub_ajuda">
             <br>
             <br>
-         <li><a href="">Suporte</a></li>
+            <li><a href="">Suporte</a></li>
             <br>
             <br>
-         <li><a href="">Contato</a></li>
-            
-         </div>
+            <li><a href="">Contato</a></li>
+
+        </div>
 
 
-         
+
         <div class="sub_juridico">
             <br>
             <br>
-         <li><a href="">Termos e condições</a></li>
+            <li><a href="">Termos e condições</a></li>
             <br>
             <br>
-         <li><a href="">Política de privacidade</a></li>
- 
-         </div>
+            <li><a href="">Política de privacidade</a></li>
+
+        </div>
 
 
     </div>
 
     <div class="footer">
         Copyright©NewEmployee 2022
-     </div>
+    </div>
 
 
 
 </body>
+
 </html>
 
 
@@ -200,88 +189,89 @@
 
     function funcao_senha() {
 
-         if (input_senha.type == "password") {
+        if (input_senha.type == "password") {
 
-         input_senha.type = "text";
-            } 
-            else {
-    input_senha.type = "password";
-  }
-         
+            input_senha.type = "text";
+        }
+        else {
+            input_senha.type = "password";
+        }
+
     }
 
     function cadastrar() {
-       
 
-       //Recupere o valor da nova input pelo nome do id
-       // Agora vá para o método fetch logo abaixo
-       var nomeVar = input_cadastro_nomeempresa.value
-       var cnpjVar = input_cadastro_cnpj.value
-       var cepVar = input_cadastro_cep.value
-       var enderecoVar = input_cadastro_endereco.value
-       var cidadeVar = input_cadastro_cidade.value
-       var bairroVar = input_cadastro_bairro.value
-       var ufVar = input_cadastro_uf.value
-       var senhaVar = input_cadastro_senha.value
-   
 
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = input_cadastro_nomeempresa.value
+        var cnpjVar = input_cadastro_cnpj.value
+        var cepVar = input_cadastro_cep.value
+        var enderecoVar = input_cadastro_endereco.value
+        var cidadeVar = input_cadastro_cidade.value
+        var bairroVar = input_cadastro_bairro.value
+        var ufVar = input_cadastro_uf.value
+        var senhaVar = input_cadastro_senha.value
 
 
 
-       
-       if (nomeVar == "" || senhaVar == "" ) {
-          alert('ERROU')
-           return false;
 
-       }else{
 
-       
 
-     
-       
+        if (nomeVar == "" || cnpjVar == "" || cepVar == "" || enderecovar == "" || cidadeVar == ""||
+       bairroVar == "" || ufVar == "" || senhaVar == "") {
+            alert('Todos os campos são OBRIGATÓRIOS')
+            return false;
 
-      
-       // Enviando o valor da nova input
-      
-       fetch("/usuarios/cadastrar", {
-           method: "POST",
-           headers: {
-               "Content-Type": "application/json"
-           },
-           body: JSON.stringify({
-               // crie um atributo que recebe o valor recuperado aqui
-               // Agora vá para o arquivo routes/usuario.js
-               nomeServer: nomeVar, 
-               cnpjServer: cnpjVar, 
-               cepServer: cepVar, 
-               enderecoServer: enderecoVar, 
-               cidadeServer:cidadeVar, 
-               bairroServer:bairroVar, 
-               ufServer:ufVar, 
-               senhaServer: senhaVar
-           })
-       }).then(function (resposta) {
+        } else {
 
-           console.log("resposta: ", resposta);
 
-           if (resposta.ok) {
-              
-               window.location = "NewLogin.html";
-               
-              
-           } else {
-               throw ("Houve um erro ao tentar realizar o cadastro!");
-           }
-       }).catch(function (resposta) {
-           console.log(`#ERRO: ${resposta}`);
-           
-       });
 
-       return false;
-   }
- 
 
-   }
+
+
+
+            // Enviando o valor da nova input
+
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    cnpjServer: cnpjVar,
+                    cepServer: cepVar,
+                    enderecoServer: enderecoVar,
+                    cidadeServer: cidadeVar,
+                    bairroServer: bairroVar,
+                    ufServer: ufVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    window.location = "NewLogin.html";
+
+
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+
+            });
+
+            return false;
+        }
+
+
+    }
 
 
 </script>

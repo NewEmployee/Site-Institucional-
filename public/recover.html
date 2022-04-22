@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Employee</title>
+    <link rel="stylesheet" href="recover.css">
+    <link rel="shortcut icon" type="imagex/png" href="img/icon.ico">
+</head>
+
+<body>
+    <selection class="recover1">
+
+        <div class="card">
+
+            <div class="header">
+
+               
+                <b>esqueceu a senha?</b>
+    
+                <img class="img_logo" src="img/cadastro/NEcadastro.png"> 
+                
+    
+                <span> <b>New</b> Employee</span> 
+    
+                <img class="img_p" src="img/cadastro/imgProdutividade.png">
+    
+            </div>
+
+            <div class="div2">
+
+
+                <form>
+                    <h1>Digite Aqui seu E-mail</h1>
+                    <img src="img/Login/imgEmail.png" >
+                    <label for="email_inp"> E-mail:</label> <br> 
+                    <input placeholder="Insira seu E-mail" type="text" id="email_inp">
+                    
+                   
+
+                    
+                    <span class="msg-cadastrar">Voltar a <a href="NewLogin.html">
+                         <b> página anterior </b></a></span> 
+
+                    <button onclick="enviar()" type="button">Enviar</button>
+
+                </form>
+                <span  id="enviaremail"></span>
+            </div>
+        </div>
+
+    </selection>
+</body>
+
+<script>
+function enviar(){
+   var verificar_email_recover = email_inp.value.indexOf('@');
+
+    if (verificar_email_recover >= 3){
+        enviaremail.innerHTML = `<b style="color: green;"> Email enviado, verifique sua caixa de entrada! </b>`;
+        
+       
+    } else{
+        enviaremail.innerHTML = '<b style="color: red;"> Verifique o E-mail digitado </b>';
+      
+        
+
+    }}
+
+
+</script>

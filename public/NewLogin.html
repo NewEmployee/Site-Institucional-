@@ -40,8 +40,12 @@
                     
                     <img src="img/Login/imgMensagem.png" alt="">
 
-                    <label for="senha_inp">Senha:</label>
+                    <label for="senha_inp">Senha: <span class="esquecer_senha">
+                        <a href="recover.html">Esqueceu a senha?</a></span> </label>
                     <input type="password" id="senha_inp" placeholder="Insira sua Senha"> <br>
+
+                    <span class="msg-cadastrar">Não possuí cadastro?<a href="cadastro.html">
+                         <b>  Registre-se </b></a></span> 
 
                     <button type="button">Login</button>
 
@@ -61,7 +65,7 @@ var senhaVar = senha_inp.value
 
 
 if (cnpjVar == "" || senhaVar == "" ) {
-           alert('ERROU')
+           alert('Todos os campos são OBRIGATÓRIOS')
             return false;
 
         }else{
