@@ -36,7 +36,9 @@
                     <h1>Digite aqui o E-mail cadastrado!</h1>
                     <img src="img/Login/imgEmail.png" >
                     <label for="email_inp"> E-mail:</label> <br> 
-                    <input placeholder="Insira seu E-mail" type="text" id="email_inp">
+                    <input placeholder="Insira seu E-mail" onkeyup="validacao_email_register()"
+                     type="text" id="email_inp">
+                    <span class="form-validation-false" id="msg_email_validation_register"></span>
                     
                    
 
@@ -55,6 +57,26 @@
 </body>
 
 <script>
+
+    // Expressão Email
+    var emailReg = /^([À-úA-z0-9._-]+@[a-z0-9._-]+\.[A-z0-9_-]+)$/;
+
+// Validacao email
+function validacao_email_register() {
+        var email = email_inp.value;
+        // Verifica email
+        if (email.match(emailReg)) {
+            msg_email_validation_register.innerHTML = '';
+            email_inp.style.border = '1px solid green ';
+            email_inp.style.color =" green";
+        } else {
+            msg_email_validation_register.innerHTML = '<b style="color: red;"> Verifique o e-mail digitado</b>';
+            email_inp.style.color = "red";
+            email_inp.style.border = '1px solid red' ;
+        }
+    }
+
+
 function enviar(){
    var verificar_email_recover = email_inp.value.indexOf('@');
 
