@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashnova.css">
+</head>
+<body>
+
+<div class="main">
+    <img class="iconeNE" src="img/icon.ico">
+
+    <p class="bemvindo">Bem vindo undefined!</p>
+
+    <button id="botao_menu1">Locais</button>
+
+    <button onclick="mudar_tela()" id="botao_menu2">Gráficos</button>
+
+    <button onclick="sair_tela()" class="sair_menu">Sair</button>
+
+
+
+</div>
+
+<div class="dash">
+    <div class="regua">
+        <div class="item-regua perigo-frio">
+            <h4 class="status">Perigo</h4>
+            <h2>0°C</h2>
+        </div>
+        <div class="item-regua alerta-frio">
+            <h4 class="status">Alerta</h4>
+            <h2>0°C</h2>
+        </div>
+        <div class="item-regua ideal">
+            <h4 class="status">Ideal</h4>
+            <h2>0°C</h2>
+        </div>
+        <div class="item-regua externo">
+            <h4 class="status">Temperatura externa</h4>
+            <h2 class="temp_externa">0°C</h2>
+        </div>
+        <div class="item-regua ideal">
+            <h4 class="status">Ideal</h4>
+            <h2>0°C</h2>
+        </div>
+        <div class="item-regua alerta-quente">
+            <h4 class="status">Alerta</h4>
+            <h2>0°C</h2>
+        </div>
+        <div class="item-regua perigo-quente">
+            <h4 class="status">Perigo</h4>
+            <h2>0°C</h2>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h1>Local 1</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_1">-°C</p>
+            </div>
+            <div class="cor-alerta" id="card_1"></div>
+        </div>
+        <div class="card">
+            <h1>Local 2</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_2">-°C</p>
+            </div>
+            <div class="cor-alerta" id="card_2"></div>
+
+        </div>
+        <div class="card">
+            <h1>Local 3</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_3">-°C</p>
+            </div>
+            <div class="cor-alerta" id="card_3"></div>
+        </div>
+        <div class="card">
+            <h1>Local 4</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_4">-°C</p>
+            </div>
+            <div class="cor-alerta" id="card_4"></div>
+        </div>
+
+    </div>
+
+</div>
+
+    
+</body>
+</html>
+
+<script>
+
+
+    function mudar_tela(){
+        window.location = "graficos.html"
+    }
+
+    function sair_tela(){
+        window.location = "index.html"
+    }
+</script>
