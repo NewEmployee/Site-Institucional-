@@ -15,11 +15,11 @@
     
         <p class="bemvindo">Bem vindo undefined!</p>
     
-        <button  onclick="mudar_tela()" id="botao_menu1">Locais</button>
+        <button  onclick="mudar_tela()" class="botoes" id="botao_menu1">Locais</button>
     
-        <button id="botao_menu2">Gráficos</button>
+        <button class="botoes" id="botao_menu2">Gráficos</button>
     
-        <button onclick="sair_tela()" class="sair_menu">Sair</button>
+        <button onclick="sair_tela()" class="botoes"  id="sair_menu">Sair</button>
     
     
     
@@ -51,8 +51,6 @@
                 <div id="div4">
                     <canvas id="myChart4" style="position: relative; height:40vh; width:40vw"></canvas>
                 </div>
-            
-            
 
             </div>
            
@@ -313,14 +311,6 @@ config4
 
 }
 
-function mudar_cor(){
-    botao_menu1.style.backgroundColor = "bisque"
-    botao_menu2.style.backgroundColor = "red"
-
-
-}
-
-mudar_cor()
 
 function mudar_tela(){
     window.location = "dashnova.html"

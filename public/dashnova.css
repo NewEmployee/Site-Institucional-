@@ -1,20 +1,29 @@
 body{
   margin: 0;
   display: flex;
- 
+  background-color: #0281f81a;
 
 }
 
 
 .main{
-  background-color: whitesmoke;
-  height:100vh;
+  height:99vh;
   width:25%;
-  border-radius: 20px;
-  border:#0282f8 solid 2px;
+
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-self: flex-start;
+  justify-content: center;
+  margin-left: 0.3%;
+  margin-top: 0.3%;
+  background: #fdfdff;
+  float: left;
+  border-radius: 14px;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
 
 }
 
@@ -32,45 +41,56 @@ body{
 }
 
 
-#botao_menu1{
-  width:60%;
-  height: 7%;
-  color:#0282f8;
-  background-color: red;
-  margin-top: 10%;
-  border-radius: 20px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
+.botoes{
+  font-family: 'Red Hat Display', sans-serif;
+    background: #0282f8;
+    border: 3px solid #0282f8;
+    box-sizing: border-box;
+    border-radius: 40px;
+    width: 45%;
+    height: 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
-#botao_menu2{
-  width:60%;
-  height: 7%;
-  color:#0282f8;
-  background-color: bisque;
-  margin-top: 10%;
-  border-radius: 20px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
+.botoes:hover {
+  transition: 0.8s;
+  width: 40%;
+  background: #ffffff;
+  color: #0282f8;
 }
 
+.btn-chart {
 
-
-.sair_menu{
-
-  margin-top: 10%;
-  width:35%;
-  height:5%;
-  background-color: aqua;
-  color:blueviolet;
+  font-family: 'Red Hat Display', sans-serif;
+  background: #0282f8;
+  border: 3px solid #0282f8;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 13%;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #ffffff;
   cursor: pointer;
 
+  font-size: 18px;
+  color: white;
+  margin: 5px;
 }
 
-
-
+.btn-chart:hover{
+  transition: 0.8s;
+  width: 15%;
+  background: #ffffff;
+  color: #0282f8;
+}
 
 
 .dash {
@@ -78,13 +98,6 @@ body{
   position: relative;
   top: 0;
   border-radius: 20px;
-  background-color: rgba(34, 132, 178, 0.329);
-  /* width: 75%;
-    display: flex;
-    background-color: #161618;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;*/
   height: 100vh;
 }
 
@@ -96,28 +109,24 @@ body{
   margin-top: 30px;
 }
 
-.perigo-frio {
-  background-color: #ff7043;
+.perigo {
+  background-color: #f329227c;
+  border: 2px solid #f32922;
 }
 
-.perigo-quente {
-  background-color: #ff7043;
-}
-
-.alerta-frio {
-  background-color: #ffee58;
-}
-
-.alerta-quente {
-  background-color: #ffee58;
+.alerta {
+  background-color: #f8e3298c;
+  border: 2px solid #f8e329;
 }
 
 .ideal {
-  background-color: #9ccc65;
+  background-color: #1cb807a2;
+  border: 2px solid #1cb807;
 }
 
 .externo {
   background-color: whitesmoke;
+  border: 2px solid rgb(192, 192, 192);
 }
 
 .item-regua {
@@ -127,6 +136,9 @@ body{
   text-align: center;
   padding-top: 15px;
   border-radius: 15px;
+  box-sizing: border-box;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+
 }
 
 .status{
@@ -156,9 +168,14 @@ body{
   text-align: center;
   height: 180px;
   justify-content: right;
-  background-color: #0909a0;
   font-size: 20px;
   border-radius: 15px;
+  color: black;
+  background-color: white;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
 }
 
 .card p {
@@ -171,7 +188,7 @@ body{
 .cards h1 {
   font-size: 22px;
   width: 100%;
-  border-bottom: solid white 1px;
+  border-bottom: solid black 1px;
   text-align: left;
   font-weight: lighter;
   margin: 20px;
@@ -206,15 +223,4 @@ body{
   height:80%
 }
 
-.btn-chart {
-  font-family: "Exo 2", sans-serif;
-  border: 0;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #00e673ec;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 10px;
-}
+
