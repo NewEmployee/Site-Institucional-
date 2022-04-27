@@ -1,40 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Charts</title>
     <link rel="stylesheet" href="dashnova.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
     <div class="main">
         <img class="iconeNE" src="img/icon.ico">
-    
-        <p class="bemvindo">Bem vindo !</p>
-    
-        <button  onclick="mudar_tela()" class="botoes" id="botao_menu1">Locais</button>
-    
-        <button class="botoes" id="botao_menu2">Gráficos</button>
-    
-        <button onclick="sair_tela()" class="botoes"  id="sair_menu">Sair</button>
-    
-    
-    
+
+        <p class="bemvindo">Bem vindo!</p>
+
+        <button onclick="mudar_tela()" class="botoes" id="botao_menu1">Locais</button>
+
+        <button class="botoes" id="botao_menu2" onclick="aparecer_generico()">Gráficos</button>
+
+        <button onclick="sair_tela()" class="botoes" id="sair_menu">Sair</button>
+
+
+
     </div>
 
     <div class="dash">
         <div class="btns-dash">
             <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-            <button class="btn-chart" onclick="obterDadosGrafico1()">Sala 1</button>
-            <button class="btn-chart" onclick="obterDadosGrafico2()">Sala 2</button>
-            <button class="btn-chart" onclick="obterDadosGrafico3()">Sala 3</button>
-            <button class="btn-chart" onclick="obterDadosGrafico4()">Sala 4</button>
+            <button class="btn-chart" onclick="obterDadosGrafico1()">Local 1</button>
+            <button class="btn-chart" onclick="obterDadosGrafico2()">Local 2</button>
+            <button class="btn-chart" onclick="obterDadosGrafico3()">Local 3</button>
+            <button class="btn-chart" onclick="obterDadosGrafico4()">Local 4</button>
         </div>
         <div class="graph">
             <div id="grafico">
+
+                <div id="div0" style="display: center; height: 40vh; width: 40vw; margin-left: 10%;">
+                    <canvas id="myChart5" style="position: relative; height:10%; width:10%"></canvas>
+                </div>
 
                 <div id="div1">
                     <canvas id="myChart1" style="position: relative; height:40vh; width:40vw"></canvas>
@@ -53,54 +59,103 @@
                 </div>
 
             </div>
-           
+
         </div>
     </div>
 
-    
+
 </body>
+
 </html>
 
 <script>
 
-    function obterDadosGrafico1(){
+    function aparecer_generico() {
 
-       
-        
+
+        const data5 = {
+            labels: [
+                'Ambiente Estável',
+                'Ambiente em Alerta',
+                'Ambiente Crítico'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [50, 25, 25],
+                backgroundColor: [
+                    '#1cb807ad',
+                    '#f8e329b2',
+                    '#ff40409d'],
+                hoverOffset: 4
+            }]
+        };
+
+        const config5 = {
+            type: 'pie',
+            data: data5,
+        };
+        const myChart5 = new Chart(
+            document.getElementById('myChart5'),
+            config5
+        )
+    }
+
+    div0.style.display = "flex"
+    div1.style.display = "none"
+    div2.style.display = "none"
+    div3.style.display = "none"
+    div4.style.display = "none";
+
+    function obterDadosGrafico1() {
+
+
+        div0.style.display = "none"
 
         const labels = [
-        '12:00',
-        '12:30',
-        '13:00',
-        '13:30',
-        '14:00',
-        '14:30'
-    ];
+            '12:00',
+            '12:30',
+            '13:00',
+            '13:30',
+            '14:00',
+            '14:30'
+        ];
 
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: 'Temperatura Interna',
-            backgroundColor: 'red',
-            borderColor: 'red',
-            data: [19, 22, 21, 23, 24, 26,15,28],
-        },        
-        ]
-    };
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Temperatura Ideal Mínima',
+                backgroundColor: '#0282f8',
+                borderColor: '#0282f8',
+                data: [15, 22, 21, 20, 19, 18],
+            },
+            {
+                label: 'Temperatura Ideal Máxima',
+                backgroundColor: '#f8e329',
+                borderColor: '#f8e329',
+                data: [29, 28, 27, 26, 25, 24],
+            },
+            {
+                label: 'Temperatura Interna',
+                backgroundColor: '#1cb807',
+                borderColor: '#1cb807',
+                data: [26, 25, 24, 23, 22, 21],
+            },
+            ]
+        };
 
-    const config = {
-        type: 'line',
-        data: data,
-        options: {}
-    };
-
-    
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
 
 
-    const myChart1 = new Chart(
-        document.getElementById('myChart1'),
-        config
-    );
+
+
+        const myChart1 = new Chart(
+            document.getElementById('myChart1'),
+            config
+        );
 
         div1.style.display = "flex"
         div2.style.display = "none"
@@ -114,47 +169,58 @@
 
 
 
-    function obterDadosGrafico2(){
-       
-        
+    function obterDadosGrafico2() {
 
-const labels2 = [
-'12:00',
-'12:30',
-'13:00',
-'13:30',
-'14:00',
-'14:30'
-];
+        div0.style.display = "none"
 
-const data2 = {
-labels: labels2,
-datasets: [{
-    label: 'Temperatura Interna',
-    backgroundColor: 'green',
-    borderColor: 'green',
-    data: [20.6, 22.4, 21, 22, 20.8, 21,15,28],
-},
+        const labels2 = [
+            '12:00',
+            '12:30',
+            '13:00',
+            '13:30',
+            '14:00',
+            '14:30'
+        ];
 
-]
-};
+        const data2 = {
+            labels: labels2,
+            datasets: [{
+                label: 'Temperatura Ideal Mínima',
+                backgroundColor: '#0282f8',
+                borderColor: '#0282f8',
+                data: [23, 22, 21, 20, 25, 18],
+            },
+            {
+                label: 'Temperatura Ideal Máxima',
+                backgroundColor: '#f8e329',
+                borderColor: '#f8e329',
+                data: [29, 28, 27, 26, 25, 24],
+            },
+            {
+                label: 'Temperatura Interna',
+                backgroundColor: '#1cb807',
+                borderColor: '#1cb807',
+                data: [26, 25, 24, 23, 22, 21],
+            },
+            ]
+        };
 
-const config2 = {
-type: 'line',
-data: data2,
-options: {}
-};
+        const config2 = {
+            type: 'line',
+            data: data2,
+            options: {}
+        };
 
 
 
 
-const myChart2 = new Chart(
-document.getElementById('myChart2'),
-config2
+        const myChart2 = new Chart(
+            document.getElementById('myChart2'),
+            config2
 
 
-        
-);
+
+        );
 
         div1.style.display = "none"
         div2.style.display = "flex"
@@ -163,47 +229,58 @@ config2
 
 
 
-}
+    }
 
-function obterDadosGrafico3(){
-
-        
-        
-
-const labels3 = [
-'12:00',
-'12:30',
-'13:00',
-'13:30',
-'14:00',
-'14:30'
-];
-
-const data3 = {
-labels: labels3,
-datasets: [{
-    label: 'Temperatura Interna',
-    backgroundColor: 'green',
-    borderColor: 'green',
-    data: [22, 21, 22, 21, 20.6, 22.4,15,28],
-},
-
-]
-};
-
-const config3 = {
-type: 'line',
-data: data3,
-options: {}
-};
+    function obterDadosGrafico3() {
 
 
+        div0.style.display = "none"
+
+        const labels3 = [
+            '12:00',
+            '12:30',
+            '13:00',
+            '13:30',
+            '14:00',
+            '14:30'
+        ];
+
+        const data3 = {
+            labels: labels3,
+            datasets: [{
+                label: 'Temperatura Ideal Mínima',
+                backgroundColor: '#0282f8',
+                borderColor: '#0282f8',
+                data: [23, 22, 21, 20, 19, 18],
+            },
+            {
+                label: 'Temperatura Ideal Máxima',
+                backgroundColor: '#f8e329',
+                borderColor: '#f8e329',
+                data: [29, 28, 27, 26, 25, 24],
+            },
+            {
+                label: 'Temperatura Interna',
+                backgroundColor: '#1cb807',
+                borderColor: '#1cb807',
+                data: [26, 25, 24, 10, 22, 21],
+            },
+            ]
+        };
+
+        const config3 = {
+            type: 'line',
+            data: data3,
+            options: {}
+        };
 
 
-const myChart3 = new Chart(
-document.getElementById('myChart3'),
-config3
-);
+
+
+        const myChart3 = new Chart(
+            document.getElementById('myChart3'),
+            config3
+        );
 
 
         div1.style.display = "none"
@@ -213,48 +290,59 @@ config3
 
 
 
-}
+    }
 
 
-function obterDadosGrafico4(){
+    function obterDadosGrafico4() {
 
-      
-        
-
-const labels4 = [
-'12:00',
-'12:30',
-'13:00',
-'13:30',
-'14:00',
-'14:30'
-];
-
-const data4 = {
-labels: labels4,
-datasets: [{
-    label: 'Temperatura Interna',
-    backgroundColor: 'yellow',
-    borderColor: 'yellow',
-    data: [20, 22, 23, 20, 21, 23,15,28],
-},
-
-]
-};
-
-const config4 = {
-type: 'line',
-data: data4,
-options: {}
-};
+        div0.style.display = "none"
 
 
+        const labels4 = [
+            '12:00',
+            '12:30',
+            '13:00',
+            '13:30',
+            '14:00',
+            '14:30'
+        ];
+
+        const data4 = {
+            labels: labels4,
+            datasets: [{
+                label: 'Temperatura Ideal Mínima',
+                backgroundColor: '#0282f8',
+                borderColor: '#0282f8',
+                data: [23, 22, 21, 20, 19, 18],
+            },
+            {
+                label: 'Temperatura Ideal Máxima',
+                backgroundColor: '#f8e329',
+                borderColor: '#f8e329',
+                data: [29, 28, 27, 26, 25, 24],
+            },
+            {
+                label: 'Temperatura Interna',
+                backgroundColor: '#1cb807',
+                borderColor: '#1cb807',
+                data: [20, 25, 24, 23, 22, 21],
+            },
+            ]
+        };
+
+        const config4 = {
+            type: 'line',
+            data: data4,
+            options: {}
+        };
 
 
-const myChart4 = new Chart(
-document.getElementById('myChart4'),
-config4
-);
+
+
+        const myChart4 = new Chart(
+            document.getElementById('myChart4'),
+            config4
+        );
 
 
         div1.style.display = "none"
@@ -264,16 +352,16 @@ config4
 
 
 
-}
+    }
 
 
-function mudar_tela(){
-    window.location = "dashnova.html"
-}
+    function mudar_tela() {
+        window.location = "dashnova.html"
+    }
 
-function sair_tela(){
-    window.location = "index.html"
-}
+    function sair_tela() {
+        window.location = "index.html"
+    }
 
 
 </script>
