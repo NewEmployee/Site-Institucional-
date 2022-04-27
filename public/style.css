@@ -231,9 +231,56 @@ h1 a:hover {
 }
 
 /* Tela Produtividade*/
+
+/* Tela Nossos Serviços */
+.nossos_servicos {
+    height: 150vh;
+    width: 100%;
+
+}
+
+.vec1_servicos{
+    position:absolute;
+    z-index: -1;
+    right: 0;
+    height: 100vh;
+}
+.vec2_servicos{
+    position:absolute;
+    margin-top: 45%;
+    z-index: -1;
+    height: 60vh;
+}
+.lampada{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    height: 50px;
+}
+
+.titulo_servicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.titulo_servicos b{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 46px;
+}
+
+.titulo_servicos span{
+    font-size: 24px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+
+
 .produtividade {
     width: 70%;
-    height: 26%;
+    height: 35%;
     margin-left: 15%;
     border: 2px #dddddd solid;
     border-radius: 16px;
@@ -270,60 +317,13 @@ h1 a:hover {
 }
 
 
-.doencas {
-    width: 70%;
-    height: 26%;
-    margin-left: 15%;
-    border: 2px #dddddd solid;
-    border-radius: 16px;
-    margin-top: 5%;
-    position: relative;
-}
-
-.coracao{
-    position: absolute;
-    left: 25px;
-    bottom: 25px;
-    height: 50px;
-}
-
-.img_doencas {
-    float: right;
-    width: 46%;
-    background-color:#F2F2F2;
-    border: 2px #F2F2F2 solid;
-    border-radius: 16px;
-    height: 100%;
-}
-
-.txt_doencas{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-}
-
-.txt_doencas b {
-    font-size: 44px;
-    font-family: 'Red Hat Display', sans-serif;
-    margin-top: 2%;
-}
-
-.txt_doencas span {
-    font-size: 22px;
-    font-family: 'Red Hat Display', sans-serif;
-    margin-bottom: 10%;
-}
-
-
 .ambiente {
     width: 70%;
-    height: 26%;
+    height: 35%;
     margin-left: 15%;
     border: 2px #dddddd solid;
     border-radius: 16px;
-    margin-top: 5%;
+    margin-top: 8%;
     position: relative;
 
 }
@@ -542,6 +542,7 @@ h1 a:hover {
 
 .palavra_Equipe {
     justify-content: center;
+    font-size: 26px;
 }
 
 .div_cabecalho_equipe .forma_Azul {
@@ -574,6 +575,12 @@ h1 a:hover {
     justify-content: space-around;
 }
 
+#Gêrencia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+}
 .equipe_fotos {
     width: 260px;
     height: 350px;
@@ -603,52 +610,6 @@ h1 a:hover {
     align-items: center;
     justify-content: center;
 }
-
-
-/* Tela Nossos Serviços */
-.nossos_servicos {
-    max-height: 200vh;
-    height: 200vh;
-    width: 100%;
-
-}
-
-.vec1_servicos{
-    position:absolute;
-    z-index: -1;
-    right: 0;
-    height: 100vh;
-}
-.vec2_servicos{
-    position:absolute;
-    margin-top: 45%;
-    z-index: -1;
-    height: 100vh;
-}
-.lampada{
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    height: 50px;
-}
-
-.titulo_servicos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-.titulo_servicos b{
-    font-size: 46px;
-    font-family: 'Red Hat Display', sans-serif;
-}
-
-.titulo_servicos span{
-    font-size: 24px;
-    font-family: 'Red Hat Display', sans-serif;
-}
-
 
 
 

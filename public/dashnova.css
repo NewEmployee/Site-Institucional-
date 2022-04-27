@@ -24,7 +24,13 @@ body{
   border: 1px solid #ebebeb;
   box-sizing: border-box;
   box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+  
+}
 
+.div_novo_usuario{
+  background-color: rebeccapurple;
+  display: flex;
+  margin-bottom: 10%;
 }
 
 .iconeNE{
@@ -58,6 +64,7 @@ body{
     color: #ffffff;
     cursor: pointer;
 }
+
 
 .botoes:hover {
   transition: 0.8s;
@@ -176,7 +183,7 @@ body{
   box-sizing: border-box;
   box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
 }
-}
+
 
 .card p {
   margin: 0;

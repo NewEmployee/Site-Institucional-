@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Employee | Cadastro</title>
+    <link rel="stylesheet" href="novo_usuario.css">
+    <link rel="shortcut icon" type="imagex/png" href="img/icon.ico">
+</head>
+
+<body>
+
+    <a href="index.html"><img src="img/home.png" id="botao_home"></a>
+
+    <div class="caixa_branca">
+
+        <div class="header">
+
+            <b>Novo usúario</b>
+
+            <img class="img_logo" src="img/cadastro/NEcadastro.png">
+
+
+            <span> <b>New</b> Employee</span>
+
+            <img class="img_p" src="img/cadastro/imgProdutividade.png">
+
+        </div>
+
+        <div class="informacoes">
+
+
+
+            <div class="row">
+
+              
+                <div class="div_input">
+                    <img src="img/Cadastro/email.png">
+                    E-mail: <br>
+                    <input id="input_cadastro_email" onkeyup="validacao_email_register()"
+                    placeholder="Insira o e-mail da empresa">
+                    <br>  <span class="form-validation-false" id="msg_email_validation_register"></span>
+                    
+                </div>
+
+                <div class="div_input">
+                    <img src="img/cadastro/cnpj.png">
+                    CNPJ: <br>
+                    <input id="input_cadastro_cnpj" onkeyup="validacao_cnpj_register()"
+                     placeholder="XX.XXX.XXX/0001-XX">
+                    <br>  <span class="form-validation-false" id="msg_cnpj_validation_register"></span>
+                </div>
+
+            </div>
+
+
+            
+
+            <div class="row">
+                <div class="div_input">
+                    <img src="img/cadastro/senha.png">
+                    Senha: <br>
+                    <input type="password" id="input_cadastro_senha"  onkeyup="validacao_senha_register()"
+                    placeholder="Insira sua senha">
+                    <br>  <span class="form-validation-false" id="msg_senha_validation_register"></span>
+               
+                </div>
+
+
+                <div class="div_input">
+                    <img src="img/cadastro/senha.png">
+                    Confirmar senha: <br>
+                    <input type="password" id="input_cadastro_senha"  onkeyup="validacao_senha_register()"
+                    placeholder="Insira sua senha">
+                    <br>  <span class="form-validation-false" id="msg_senha_validation_register"></span>
+               
+                </div>
+
+            </div>
+
+            
+                <span class="msg-cadastrar">Já é cadastrado? <a href="Newlogin.html"> <b> Entrar </b></a></span>  
+            <button onclick="cadastrar()">Cadastrar</button>
+
+            
+        </div>
+
+
+
+    </div>
+
+    <div class="coluna_preta">
+
+        <div class="imagem_preta">
+            <img src="img/cadastro/ne_preto.png">
+        </div>
+
+        <div class="titulos">
+            <a>Serviços</a>
+            <a>Social</a>
+            <a>Ajuda</a>
+            <a>Jurídico</a>
+        </div>
+
+
+        <div class="sub_servicos">
+            <br>
+            <br>
+            <li><a href="">Produtividade</a></li>
+            <br>
+            <br>
+            <li><a href="">Diminuir doenças</a></li>
+            <br>
+            <br>
+
+            <li><a href="">Ambiente confortável</a></li>
+
+        </div>
+
+        <div class="sub_social">
+            <br>
+            <br>
+            <li><a href="">Facebook</a></li>
+            <br>
+            <br>
+            <li><a href="">Instagram</a></li>
+            <br>
+            <br>
+            <li><a href="">Linkedin</a></li>
+
+        </div>
+
+
+        <div class="sub_ajuda">
+            <br>
+            <br>
+            <li><a href="">Suporte</a></li>
+            <br>
+            <br>
+            <li><a href="">Contato</a></li>
+
+        </div>
+
+
+
+        <div class="sub_juridico">
+            <br>
+            <br>
+            <li><a href="">Termos e condições</a></li>
+            <br>
+            <br>
+            <li><a href="">Política de privacidade</a></li>
+
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        Copyright©NewEmployee 2022
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    // Expressões Regulares
+     //Expressão Cnpj
+    var cnpjReg = /^[0-9]{2}.?[0-9]{3}.?[0-9]{3}.?[0-9]{4}\-?[0-9]{2}$/;
+     //Expressão cep
+     // Expressão Email
+     var emailReg = /^([À-úA-z0-9._-]+@[a-z0-9._-]+\.[A-z0-9_-]+)$/;
+     //Expressão Senha
+    var senhaReg = /^(?=.*[0-9]{3})(?=.*[A-z]{1})[A-z0-9]{6,}$/;
+
+
+    function validacao_cnpj_register() {
+        var cnpj = input_cadastro_cnpj.value;
+        // Verifica Cnpj
+        if (cnpj.match(cnpjReg)) {
+            msg_cnpj_validation_register.innerHTML = '';
+            input_cadastro_cnpj.style.border = '1px solid green ';
+            input_cadastro_cnpj.style.color =" green";
+        } else {
+            msg_cnpj_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
+            input_cadastro_cnpj.style.color = "red";
+            input_cadastro_cnpj.style.border = '1px solid red' ;
+            
+            
+        }
+    }
+
+    
+    // Validacao email
+    function validacao_email_register() {
+        var email = input_cadastro_email.value;
+        // Verifica email
+        if (email.match(emailReg)) {
+            msg_email_validation_register.innerHTML = '';
+            input_cadastro_email.style.border = '1px solid green ';
+            input_cadastro_email.style.color =" green";
+        } else {
+            msg_email_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
+            input_cadastro_email.style.color = "red";
+            input_cadastro_email.style.border = '1px solid red' ;
+        }
+    }
+
+    // Validacao Senha
+    function validacao_senha_register() {
+        var senha = input_cadastro_senha.value;
+        // Verifica senha
+        if (senha.match(senhaReg)) {
+            msg_senha_validation_register.innerHTML = '';
+            input_cadastro_senha.style.border = '2px solid green';
+            input_cadastro_senha.style.color = "green";
+        } else {
+            msg_senha_validation_register.innerHTML = 
+            '<b style="color: red;"> A senha deve conter pelo menos 6 dígitos,<br>1 letra maiúscula, <br>1 letra minúscula <br>e 3 números </b>';
+            input_cadastro_senha.style.color = "red";
+            input_cadastro_senha.style.border = '2px solid red ' ;
+        }
+    }
+
+    function funcao_senha() {
+
+        if (input_senha.type == "password") {
+
+            input_senha.type = "text";
+        }
+        else {
+            input_senha.type = "password";
+        }
+
+    }
+
+    function cadastrar() {
+
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = input_cadastro_nomeempresa.value
+        var cnpjVar = input_cadastro_cnpj.value
+        var cepVar = input_cadastro_cep.value
+        var enderecoVar = input_cadastro_endereco.value
+        var cidadeVar = input_cadastro_cidade.value
+        var bairroVar = input_cadastro_bairro.value
+        var emailVar = input_cadastro_email.value
+        var senhaVar = input_cadastro_senha.value
+
+
+
+
+
+
+        if (nomeVar == "" || cnpjVar == "" || cepVar == "" || enderecoVar == "" || cidadeVar == ""||
+       bairroVar == "" || emailVar == "" || senhaVar == "") {
+            alert('Todos os campos são OBRIGATÓRIOS')
+            return false;
+
+        } else {
+
+
+
+
+
+
+
+            // Enviando o valor da nova input
+
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    cnpjServer: cnpjVar,
+                    cepServer: cepVar,
+                    enderecoServer: enderecoVar,
+                    cidadeServer: cidadeVar,
+                    bairroServer: bairroVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    window.location = "NewLogin.html";
+
+
+                } else {
+                    alert('Houve um erro ao tentar realizar o cadastro, verifique os campos preenchidos!')
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+
+            });
+
+            return false;
+        }
+
+
+    }
+
+
+</script>

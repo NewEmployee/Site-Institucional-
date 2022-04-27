@@ -1,0 +1,275 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url(img/cadastro/cadastro_fundo.png);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Red Hat Display', sans-serif;
+    position: absolute;
+}
+
+.caixa_branca {
+    background: linear-gradient(108.67deg, rgba(255, 255, 255, 0.4) 2.17%, rgba(255, 255, 255, 0.20) 101.22%);
+    backdrop-filter: blur(50px);
+    border-radius: 40px;
+    height: 80%;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 1.2%;
+    border-radius: 25px;
+    position: absolute;
+}
+
+.header {
+    width: 96%;
+    height: 20%;
+    margin-top: 2%;
+    display: flex;
+    font-size: 60px;
+    margin-left: 10%;
+}
+
+.header b {
+    font-size: 42px;
+    margin-top: 1.2%;
+}
+
+.header span {
+    font-size: 40px;
+    margin-top: 1.2%;
+    margin-left: 1%;
+}
+
+.img_logo {
+    margin-left: 20%;
+    margin-top: 1%;
+    height: 50px;
+
+
+}
+
+
+.img_p {
+    height: 30px;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3%;
+
+}
+
+.informacoes {
+    height: 55%;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+
+}
+
+.informacoes img {
+    height: 30px;
+
+}
+
+.informacoes input {
+    padding: 8px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 300px;
+}
+
+
+
+.informacoes button {
+    margin-left: 42%;
+    background-color: #000000c2;
+    color: white;
+    border-radius: 19px;
+    padding: 15px;
+    width: 16%;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-style: solid;
+    border-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2px;
+}
+
+.msg-cadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "nunito";
+    font-size: 1em;
+    margin-bottom: 5px;
+    color:#252525;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.coluna_preta {
+    background-color: black;
+    height: 48%;
+    width: 100%;
+    margin-top: 49%;
+}
+
+.imagem_preta {
+    height: 100%;
+    width: 18%;
+    float: left;
+}
+
+.imagem_preta img {
+    margin-left: 35%;
+    margin-top: 18%;
+}
+
+.titulos {
+    height: 30%;
+    width: 82%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    float: left;
+}
+
+.titulos a {
+    font-size: 2.2em;
+    padding: 20px;
+    margin-top: 5%;
+    margin-right: 10%;
+
+
+}
+
+.sub_servicos {
+    height: 70%;
+    width: 20%;
+    float: left;
+}
+
+li {
+    color: white;
+
+}
+
+
+
+.sub_servicos a {
+    color: #e0e0e0e8;
+    font-size: 1.2em;
+}
+
+.sub_servicos li {
+    margin-left: 19%;
+}
+
+
+.sub_social {
+    float: left;
+    width: 20%;
+    height: 70%;
+}
+
+.sub_social a {
+    color: #e0e0e0e8;
+    font-size: 1.2em;
+}
+
+.sub_social li {
+    margin-left: 23%;
+}
+
+.sub_ajuda {
+    float: left;
+    width: 20%;
+    height: 70%;
+}
+
+.sub_ajuda a {
+    color: #e0e0e0e8;
+    font-size: 1.2em;
+}
+
+.sub_ajuda li {
+    margin-left: 15%;
+}
+
+.sub_juridico {
+    float: left;
+    width: 20%;
+    height: 70%;
+}
+
+.sub_juridico a {
+    color: #e0e0e0e8;
+    font-size: 1.2em;
+}
+
+.footer {
+    width: 100%;
+    height: 5%;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+button:hover {
+    background-color: #0282F8;
+    transition: 1s;
+    width: 12%;
+    margin-left: 43%;
+
+}
+
+#botao_home {
+    height: 10%;
+    margin-left: 5%;
+    margin-top: 1%;
+}
