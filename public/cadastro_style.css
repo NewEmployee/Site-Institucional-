@@ -84,19 +84,21 @@ body {
 
 
 .informacoes button {
-    margin-left: 42%;
+    margin-left: 43%;
     background-color: #000000c2;
     color: white;
     border-radius: 19px;
     padding: 15px;
-    width: 14%;
+    width: 13%;
     font-size: 1.2em;
     font-weight: bold;
     border-style: solid;
     border-color: black;
     transition: 0.5s;
     cursor: pointer;
-    display: block;
+    display: fixed;
+    position: fixed;
+    margin-top: 33%;
 
 }
 
@@ -113,37 +115,16 @@ a {
     font-family: "nunito";
     font-size: 1em;
     margin-bottom: 5px;
-    color:#252525;
+    color:#292727;
+    position: fixed;
+    margin-left: 43%;
+    margin-top: 31%;
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.msg-cadastrar b{
+color: black;
+}
 
 
 
@@ -259,8 +240,8 @@ li {
 button:hover {
     background-color: #0282F8;
     transition: 1s;
-    width: 12%;
-    margin-left: 43%;
+    width: 11%;
+    margin-left: 44%;
 
 }
 
@@ -268,4 +249,8 @@ button:hover {
     height: 10%;
     margin-left: 5%;
     margin-top: 1%;
+}
+
+.titulos, a {
+    color: white;
 }

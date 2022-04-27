@@ -132,8 +132,8 @@ button {
 button:hover {
     background-color: #0282F8;
     transition: 1s;
-    width: 24%;
-    margin-left: 40%;
+    width: 26%;
+    margin-left: 37%;
     cursor: pointer;
 
 }
