@@ -112,17 +112,17 @@ body{
 }
 
 .perigo {
-  background-color: #f329227c;
+  background-color: #df120bd2;
   border: 2px solid #f32922;
 }
 
 .alerta {
-  background-color: #f8e3298c;
+  background-color: #f8e329f8;
   border: 2px solid #f8e329;
 }
 
 .ideal {
-  background-color: #1cb807a2;
+  background-color: #1cb807e0;
   border: 2px solid #1cb807;
 }
 
@@ -178,6 +178,21 @@ body{
   box-sizing: border-box;
   box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
 }
+
+#local_1 {
+  background-color: #df120bd2;
+}
+#local_2 {
+  background-color: #1cb807e0;
+}
+#local_3 {
+  background-color: #1cb807e7;
+}
+#local_4 {
+  background-color: #f8e329f8;
+}
+
+
 
 
 .card p {
