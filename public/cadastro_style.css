@@ -89,13 +89,14 @@ body {
     color: white;
     border-radius: 19px;
     padding: 15px;
-    width: 16%;
+    width: 14%;
     font-size: 1.2em;
     font-weight: bold;
     border-style: solid;
     border-color: black;
     transition: 0.5s;
     cursor: pointer;
+    display: block;
 
 }
 

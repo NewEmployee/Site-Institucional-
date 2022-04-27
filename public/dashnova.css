@@ -1,7 +1,8 @@
 body{
   margin: 0;
   display: flex;
-  background-color: #0281f81a;
+  background-color:#b9d4eeda;
+  color: #ffffff;
 
 }
 
@@ -16,7 +17,7 @@ body{
   justify-content: center;
   margin-left: 0.3%;
   margin-top: 0.3%;
-  background: #fdfdff;
+  background: white;
   float: left;
   border-radius: 14px;
   align-items: center;
@@ -107,6 +108,7 @@ body{
   justify-content: center;
   width: 100%;
   margin-top: 30px;
+  color: black;
 }
 
 .perigo {
@@ -125,7 +127,7 @@ body{
 }
 
 .externo {
-  background-color: whitesmoke;
+  background-color: rgb(61, 168, 182);
   border: 2px solid rgb(192, 192, 192);
 }
 
@@ -157,7 +159,7 @@ body{
   height: 450px;
   width: 100%;
   align-items: center;
-  color: white;
+  color: black;
 }
 
 .card {
@@ -176,7 +178,7 @@ body{
   box-sizing: border-box;
   box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
 }
-}
+
 
 .card p {
   margin: 0;
