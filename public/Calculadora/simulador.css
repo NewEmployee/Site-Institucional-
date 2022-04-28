@@ -362,3 +362,7 @@ input {
   color: rgb(58, 137, 255);
   
 }
+
+#input_tarefas_custo {
+  float: left;
+}

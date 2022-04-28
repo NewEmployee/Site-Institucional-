@@ -18,8 +18,8 @@
           src="https://cdn.discordapp.com/attachments/951968512044322831/953450184208175145/logo.png"
         />
         <p class="titulo">
-          Insira as informações para calcularmos a taxa de
-          absenteísmo para você !
+          Insira as informações para calcularmos o qual sua
+          produtividade !
         </p>
 
         <div class="alerta_erro">
@@ -28,22 +28,50 @@
           </div>
         </div>
 
-        <h3 class="textInput"> Nome da empresa:</h3>
+        <h3 class="textInput" id="h3_nome"> Nome da empresa:</h3>
         <input class="input" type="text" id="nomeE" />
 
-        <h3 class="textInput"> Quantidade de funcionarios:</h3>
+        <h3 class="textInput" id="h3_funcionarios"> Quantidade de funcionarios:</h3>
         <input class="input" type="number" id="qntdFuncionario" />
 
-        <h3 class="textInput">Jornada diaria em média:</h3>
+        <h3 class="textInput" id="h3_jornada">Jornada diaria em média:
+          <div id="passar_mouse">
+            <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
+              <div id="mostrar">
+                Quantas horas trabalha seu funcionario diariamente.
+              </div>
+          </div>
+        </h3>
         <input class="input" type="number" id="horas" />
 
-        <h3 class="textInput"> Dias trabalhados no mês:</h3>  
+        <h3 class="textInput" id="h3_dias"> Dias trabalhados no mês:</h3>  
         <input class="input" type="number" id="diasTrabalhados" />
 
-        <h3 class="textInput"> Total de faltas no mês:</h3>
-        <input class="input" type="number" id="faltas" />
+        
+        <h3 class="textInput" id="h3_tarefas"> Quantas tarefas são realizadas diariamente:
+        <div id="passar_mouse">
+          <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
+            <div id="mostrar">
+              Exemplo:<br>cada funcionário produz 20 tênis por dia
+            </div>
+        </div>
+        </h3>
+        <input class="input" type=  "number" id="input_tarefas" />
 
-        <h3 class="textInput"> Total de horas perdidas no mês:
+        <h3 class="textInput" id="h3_tarefas_custo"> Quanto custa uma tarefa em média:
+          <div id="passar_mouse">
+            <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
+              <div id="mostrar">
+                Exemplo:<br>um tênis vale 100 reais
+              </div>
+          </div>
+        </h3>
+        <input class="input" type=  "number" id="input_tarefas_custo" />
+
+        <!-- <h3 class="textInput"> Total de faltas no mês:</h3>
+        <input class="input" type="number" id="faltas" /> -->
+
+        <!-- <h3 class="textInput"> Total de horas perdidas no mês:
           <div id="passar_mouse">
             <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
               <div id="mostrar">
@@ -51,10 +79,10 @@
               </div>
           </div>
         </h3>
-        <input class="input" type="number" id="atrasos" />
+        <input class="input" type="number" id="atrasos" /> -->
 
-        <h3 class="textInput"> Qual a média salarial bruta:</h3>
-        <input class="input" type="number" id="mSalario" />
+        <!-- <h3 class="textInput"> Qual a média salarial bruta:</h3>
+        <input class="input" type="number" id="mSalario" /> -->
 
         <button class="bntCalcular" onclick="calcular()">Calcular</button>
 
@@ -70,39 +98,39 @@
 
         <div class="div_pai_info">
             <div class="div_info">
-              <h2 class="h2_info">Horas de trabalho <br><p class="p_info" id="p_horas"></p></h2>
-              <h2 class="h2_info">Horas de abstenção <br><p class="p_info" id="p_abstencao"></p></h2>
-              <h2 class="h2_info">Valor hora <br><p class="p_info" id="p_valor"></p></h2>
+              <h2 class="h2_info">Horas de trabalho<br><p class="p_info" id="p_horas"></p></h2>
+              <!-- <h2 class="h2_info">Horas de abstenção <br><p class="p_info" id="p_abstencao"></p></h2> -->
+              <h2 class="h2_info">Valor da tarefa <br><p class="p_info" id="p_valor"></p></h2>
             </div>
         </div>
 
         <div class="div_chart" id="div_chart1">
-          <div>Porcentagem do absenteísmo antes e depois</div>
+          <div>Quantidade de itens produzidos por hora</div>
           <canvas id="chart1"></canvas>
         </div>
 
         <div class="div_chart" id="div_chart2">
-          <div>Quanto perco em dinheiro</div>
+          <div>Quanto ganho mensalmente</div>
           <canvas id="chart2"></canvas>
         </div>
         
         <div class="div_chart" id="div_dinheiro">
           <div class="div_info_dinheiro"><h2 class="h2_antes">Antes:</h2>
             <div id="div_perca_antes">
-              Perca em dinheiro:
+              
             </div>
             <div id="div_abs_antes">
-              Taxa de absenteísmo:
+              
             </div>
           </div>
           <div class="div_info_dinheiro" id="div_info_texto"></div>
 
           <div class="div_info_dinheiro"><h2 class="h2_depois">Depois:</h2>
             <div id="div_perca_depois">
-              Perca em dinheiro:
+              
             </div>
             <div id="div_abs_depois">
-              Taxa de absenteísmo:
+              
             </div>
           </div>
         </div>
