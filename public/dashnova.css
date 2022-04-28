@@ -186,19 +186,23 @@ body{
 #local_1 {
   background-color: #ff40409d;
   border: 3px solid #df120bd2;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   
 }
 #local_2 {
   background-color: #1cb807ad;
   border: 3px solid #1cb807;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #local_3 {
   background-color: #1cb807ad;
   border: 3px solid #1cb807;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #local_4 {
   background-color: #f8e329b2;
   border: 3px solid #c2b117;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 
