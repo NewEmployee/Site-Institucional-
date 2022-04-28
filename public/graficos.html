@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="dashnova.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+<body onload="aparecer_generico()">
 
     <div class="main">
         <img class="iconeNE" src="img/icon.ico">
@@ -17,7 +17,7 @@
     
         <button  onclick="mudar_tela()" class="botoes" id="botao_menu1">Locais</button>
     
-        <button class="botoes" id="botao_menu2">Gráficos</button>
+        <button class="botoes" id="botao_menu2" onclick="aparecer_generico()">Gráficos</button>
     
         <button onclick="sair_tela()" class="botoes"  id="sair_menu">Sair</button>
     
@@ -36,20 +36,9 @@
         <div class="graph">
             <div id="grafico">
 
-                <div id="div1">
-                    <canvas id="myChart1" style="position: relative; height:40vh; width:40vw"></canvas>
-                </div>
-
-                <div id="div2">
-                    <canvas id="myChart2" style="position: relative; height:40vh; width:40vw"></canvas>
-                </div>
-
-                <div id="div3">
-                    <canvas id="myChart3" style="position: relative; height:40vh; width:40vw"></canvas>
-                </div>
-
-                <div id="div4">
-                    <canvas id="myChart4" style="position: relative; height:40vh; width:40vw"></canvas>
+               
+                <div id="div1"  style="width:43vw; margin-left: 15%; ">
+                    <canvas id="myChart1"></canvas>
                 </div>
 
             </div>
@@ -63,9 +52,46 @@
 
 <script>
 
+function aparecer_generico() {
+
+grafico();
+
+
+
+
+
+const data = {
+    labels: [
+        'Ambiente Estável',
+        'Ambiente em Alerta',
+        'Ambiente Crítico'
+    ],
+    datasets: [{
+        label: 'My First Dataset',
+        data: [50, 25, 25],
+        backgroundColor: [
+            '#1cb807ad',
+            '#f8e329b2',
+            '#ff40409d'],
+        hoverOffset: 4
+    }]
+};
+
+
+const config = {
+    type: 'pie',
+    data: data,
+};
+const myChart1 = new Chart(
+    document.getElementById('myChart1'),
+    config
+)
+
+
+}
     function obterDadosGrafico1(){
 
-       
+        grafico();
         
 
         const labels = [
@@ -100,25 +126,26 @@
     const myChart1 = new Chart(
         document.getElementById('myChart1'),
         config
-    );
-
-        div1.style.display = "flex"
-        div2.style.display = "none"
-        div3.style.display = "none"
-        div4.style.display = "none"
-
-
-
+    ); 
 
     }
 
+    function grafico() {
+    var div = document.getElementById('div1');
+    var temp_velho = document.getElementById('myChart1');
+    div.removeChild(temp_velho)
+
+    var temp_novo = document.createElement('canvas')
+    temp_novo.id = 'myChart1';
+    div.appendChild(temp_novo);
+}
 
 
     function obterDadosGrafico2(){
        
-        
+        grafico();
 
-const labels2 = [
+const labels = [
 '12:00',
 '12:30',
 '13:00',
@@ -127,8 +154,8 @@ const labels2 = [
 '14:30'
 ];
 
-const data2 = {
-labels: labels2,
+const data = {
+labels: labels,
 datasets: [{
     label: 'Temperatura Interna',
     backgroundColor: 'green',
@@ -139,38 +166,31 @@ datasets: [{
 ]
 };
 
-const config2 = {
+const config = {
 type: 'line',
-data: data2,
+data: data,
 options: {}
 };
 
 
 
 
-const myChart2 = new Chart(
-document.getElementById('myChart2'),
-config2
+const myChart = new Chart(
+document.getElementById('myChart1'),
+config
 
 
         
 );
-
-        div1.style.display = "none"
-        div2.style.display = "flex"
-        div3.style.display = "none"
-        div4.style.display = "none"
-
-
 
 }
 
 function obterDadosGrafico3(){
 
         
-        
+    grafico();
 
-const labels3 = [
+const labels = [
 '12:00',
 '12:30',
 '13:00',
@@ -179,8 +199,8 @@ const labels3 = [
 '14:30'
 ];
 
-const data3 = {
-labels: labels3,
+const data = {
+labels: labels,
 datasets: [{
     label: 'Temperatura Interna',
     backgroundColor: 'green',
@@ -191,26 +211,19 @@ datasets: [{
 ]
 };
 
-const config3 = {
+const config = {
 type: 'line',
-data: data3,
+data: data,
 options: {}
 };
 
 
 
 
-const myChart3 = new Chart(
-document.getElementById('myChart3'),
-config3
+const myChart = new Chart(
+document.getElementById('myChart1'),
+config
 );
-
-
-        div1.style.display = "none"
-        div2.style.display = "none"
-        div3.style.display = "flex"
-        div4.style.display = "none"
-
 
 
 }
@@ -219,9 +232,9 @@ config3
 function obterDadosGrafico4(){
 
       
-        
+    grafico();
 
-const labels4 = [
+const labels = [
 '12:00',
 '12:30',
 '13:00',
@@ -230,8 +243,8 @@ const labels4 = [
 '14:30'
 ];
 
-const data4 = {
-labels: labels4,
+const data = {
+labels: labels,
 datasets: [{
     label: 'Temperatura Interna',
     backgroundColor: 'yellow',
@@ -242,28 +255,19 @@ datasets: [{
 ]
 };
 
-const config4 = {
+const config = {
 type: 'line',
-data: data4,
+data: data,
 options: {}
 };
 
 
 
 
-const myChart4 = new Chart(
-document.getElementById('myChart4'),
-config4
+const myChart = new Chart(
+document.getElementById('myChart1'),
+config
 );
-
-
-        div1.style.display = "none"
-        div2.style.display = "none"
-        div3.style.display = "none"
-        div4.style.display = "flex"
-
-
-
 }
 
 

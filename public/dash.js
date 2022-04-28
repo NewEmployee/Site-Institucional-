@@ -9,6 +9,7 @@ function salaum(){
         '14:00',
         '14:30'
     ];
+    
 
     const data = {
         labels: labels,
