@@ -118,12 +118,12 @@ body{
   color: black;
 }
 
-.perigo {
+.perigo_acima {
   background-color: #ff40409d;
   border: 3px solid #df120bd2;
 }
 
-.alerta {
+.alerta_acima {
   background-color: #f8e329b2;
   border: 3px solid #c2b117;
 }
@@ -133,7 +133,15 @@ body{
   border: 3px solid #1cb807;
 }
 
+.alerta_abaixo {
+  background-color: #0768b8ad;
+  border: 3px solid #0768b8;
+}
 
+.perigo_abaixo {
+  background-color: #5407b8ad;
+  border: 3px solid #5407b8;
+}
 
 .item-regua {
   padding: 5px;

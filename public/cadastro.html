@@ -59,7 +59,7 @@
                 <div class="div_input">
                     <img src="img/Cadastro/cep.png">
                     CEP: <br>
-                    <input id="input_cadastro_cep" onkeyup="validacao_cep_register()"
+                    <input id="input_cadastro_cep" onchange="viacep()" onkeyup="validacao_cep_register()"
                      placeholder="XXXXX-XXX">
                      <br>  <span class="form-validation-false" id="msg_cep_validation_register"></span>
 
@@ -433,5 +433,23 @@
 
     }
 
+    function viacep() {
+
+fetch(`https://viacep.com.br/ws/${input_cadastro_cep.value}/json/`, {
+    method: "GET",
+    mode: "cors"
+}).then(function (resposta) {
+    console.log(resposta)
+    resposta.json().then(function(data) {
+        console.log(data)
+        input_cadastro_endereco.value = data.logradouro;
+        input_cadastro_bairro.value = data.bairro;
+        input_cadastro_cidade.value = data.localidade
+    })
+
+}).catch(function (erro) {
+    console.log(erro)
+})
+}
 
 </script>
