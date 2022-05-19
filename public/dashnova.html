@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="dashnova.css">
     <link rel="shortcut icon" type="imagex/png" href="img/icon.ico">
 </head>
-<body>
+
+<body  onload="nome_do_usuario(), nome_da_empresa()">
 
 <div class="main">
     
     <img class="iconeNE" src="img/icon.ico">
-
-    <p class="bemvindo">Bem vindo !</p>
+    <span id="empresa" style="color: black;"></span>
+    <p class="bemvindo">Bem vindo <span id="usuario"></span>!</p>
 
     <button id="botao_menu1" class="botoes">Locais</button>
 
@@ -100,17 +101,24 @@
 </html>
 
 <script>
+    function nome_do_usuario(){
+        usuario.innerHTML = sessionStorage.NOME_USUARIO
+    }
 
+    function nome_da_empresa(){
+        empresa.innerHTML = sessionStorage.NOME_EMPRESA
+    }
 
     function mudar_tela(){
-        window.location = "graficos.html"
+        window.location = "graficos.html";
     }
 
     function sair_tela(){
-        window.location = "index.html"
+        window.location = "index.html";
+
     }
 
     function novo_usuario(){
-        window.location = "novo_usuario.html"
+        window.location = "novo_usuario.html";
     }
 </script>

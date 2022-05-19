@@ -36,18 +36,18 @@
 
                 <form>
                     
-                    <img src="img/Cadastro/cnpj.png" >
-                    <label for="cnpj_inp"> CNPJ:</label> <br> 
-                    <input placeholder="Insira o CNPJ da sua empresa" onkeyup="validacao_cnpj_register()"
-                    type="text" id="cnpj_inp">
-                     <span class="form-validation-false" id="msg_cnpj_validation_register"></span>
+                    <img src="img/Cadastro/email.png" >
+                    <label for="email_usuario"> E-mail:</label> <br> 
+                    <input placeholder="Insira o E-mail" 
+                    type="text" id="email_usuario" onkeyup="validacao_email_register()">
+                     <span class="form-validation-false" id="msg_email_validation_register"></span>
                     
                     <img src="img/Login/imgMensagem.png" alt="">
 
-                    <label for="senha_inp">Senha: <span class="esquecer_senha">
+                    <label for="senha_usuario">Senha: <span class="esquecer_senha">
                         <a href="recover.html">Esqueceu a senha?</a></span> </label>
-                    <input type="password" id="senha_inp" onkeyup="validacao_senha_register()"
-                     placeholder="Insira sua Senha"> 
+                    <input type="password" id="senha_usuario" 
+                     placeholder="Insira sua Senha" > 
                     <span class="form-validation-false" id="msg_senha_validation_register"></span><br>
 
                     <span class="msg-cadastrar">Não possuí cadastro?<a href="cadastro.html">
@@ -66,60 +66,30 @@
 
 <script>
 
- //Expressão Cnpj
- var cnpjReg = /^[0-9]{2}.?[0-9]{3}.?[0-9]{3}.?[0-9]{4}\-?[0-9]{2}$/;
- //Expressão Senha
- var senhaReg = /^(?=.*[0-9]{3})(?=.*[A-z]{1})[A-z0-9]{6,}$/;
+// Expressão Email
+var emailReg = /^([À-úA-z0-9._-]+@[a-z0-9._-]+\.[A-z0-9_-]+)$/;
 
-
-
-function validacao_cnpj_register() {
-        var cnpj = cnpj_inp.value;
-        // Verifica Cnpj
-        if (cnpj.match(cnpjReg)) {
-            msg_cnpj_validation_register.innerHTML = '';
-            cnpj_inp.style.border = '1px solid green ';
-            cnpj_inp.style.color =" green";
+ function validacao_email_register() {
+        var email = email_usuario.value;
+        // Verifica email
+        if (email.match(emailReg)) {
+            msg_email_validation_register.innerHTML = '';
+            email_usuario.style.border = '1px solid green ';
+            email_usuario.style.color = " green";
         } else {
-            msg_cnpj_validation_register.innerHTML = '<b style="color: red;"> Insira um CNPJ válido </b>';
-            cnpj_inp.style.color = "red";
-            cnpj_inp.style.border = '1px solid red' ;
-            
-            
+            msg_email_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
+            email_usuario.style.color = "red";
+            email_usuario.style.border = '1px solid red';
         }
     }
-
-       // Validacao Senha
-       function validacao_senha_register() {
-        var senha = senha_inp.value;
-        // Verifica senha
-        if (senha.match(senhaReg)) {
-            msg_senha_validation_register.innerHTML = '';
-            senha_inp.style.border = '2px solid green';
-            senha_inp.style.color = "green";
-        } else {
-            msg_senha_validation_register.innerHTML = 
-            '<b style="color: red;"> Insira uma senha válida';
-            senha_inp.style.color = "red";
-            senha_inp.style.border = '2px solid red ' ;
-        }
-    }
-
     function entrar(){
-var cnpjVar = cnpj_inp.value
-var senhaVar = senha_inp.value
+var emailVar = email_usuario.value
+var senhaVar = senha_usuario.value
 
 
-if (cnpjVar == "" || senhaVar == "" ) {
+if (emailVar == "" || senhaVar == "" ) {
            alert('Todos os campos são OBRIGATÓRIOS')
-            return false;
-
-        }else{
-
-
-
-
-
+       }else{
 
 fetch("/usuarios/autenticar", {
             method: "POST",
@@ -127,7 +97,7 @@ fetch("/usuarios/autenticar", {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                cnpjServer: cnpjVar,
+                emailServer: emailVar,
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
@@ -140,10 +110,8 @@ fetch("/usuarios/autenticar", {
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.CNPJ_empresa;
-                    sessionStorage.NOME_USUARIO = json.nome_empresa;
-                    sessionStorage.ID_USUARIO = json.id_empresa;
-
+                    sessionStorage.ID_EMPRESA = json.fk_empresa;
+                    sessionStorage.NOME_USUARIO = json.nome_usuario;
                     setTimeout(function () {
                         window.location = "dashnova.html";
                     }, 1000); // apenas para exibir o loading
@@ -156,7 +124,6 @@ fetch("/usuarios/autenticar", {
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 

@@ -10,7 +10,7 @@
     <link rel="shortcut icon" type="imagex/png" href="img/icon.ico">
 </head>
 
-<body>
+<body onload="armazenar()">
 
     <a href="index.html"><img src="img/home.png" id="botao_home"></a>
 
@@ -35,21 +35,21 @@
 
             <div class="row">
 
-              
+
                 <div class="div_input">
                     <img src="img/cadastro/imgEmpresa.png">
                     Nome da Empresa: <br>
-                    <input id="input_cadastro_nomeempresa" onkeyup="validacao_name_register()" 
-                    placeholder="Insira o nome da sua empresa">
-                  <br>  <span class="form-validation-false" id="msg_name_validation_register"></span>
+                    <input id="input_cadastro_nomeempresa" onkeyup="validacao_name_register()"
+                        placeholder="Insira o nome da sua empresa">
+                    <br> <span class="form-validation-false" id="msg_name_validation_register"></span>
                 </div>
 
                 <div class="div_input">
                     <img src="img/cadastro/cnpj.png">
                     CNPJ: <br>
                     <input id="input_cadastro_cnpj" onkeyup="validacao_cnpj_register()"
-                     placeholder="XX.XXX.XXX/0001-XX">
-                    <br>  <span class="form-validation-false" id="msg_cnpj_validation_register"></span>
+                        placeholder="XX.XXX.XXX/0001-XX">
+                    <br> <span class="form-validation-false" id="msg_cnpj_validation_register"></span>
                 </div>
 
             </div>
@@ -60,8 +60,8 @@
                     <img src="img/Cadastro/cep.png">
                     CEP: <br>
                     <input id="input_cadastro_cep" onchange="viacep()" onkeyup="validacao_cep_register()"
-                     placeholder="XXXXX-XXX">
-                     <br>  <span class="form-validation-false" id="msg_cep_validation_register"></span>
+                        placeholder="XXXXX-XXX">
+                    <br> <span class="form-validation-false" id="msg_cep_validation_register"></span>
 
                 </div>
 
@@ -69,8 +69,8 @@
                     <img src="img/Cadastro/endereco.png">
                     Endereço <br>
                     <input id="input_cadastro_endereco" onkeyup="validacao_endereco_register()"
-                     placeholder="Insira seu endereço">
-                     <br>  <span class="form-validation-false" id="msg_endereco_validation_register"></span>
+                        placeholder="Insira seu endereço">
+                    <br> <span class="form-validation-false" id="msg_endereco_validation_register"></span>
                 </div>
             </div>
 
@@ -80,8 +80,8 @@
                     <img src="img/cadastro/imgCidade.png">
                     Cidade: <br>
                     <input id="input_cadastro_cidade" onkeyup="validacao_cidade_register()"
-                    placeholder="Insira sua cidade">
-                    <br>  <span class="form-validation-false" id="msg_cidade_validation_register"></span>
+                        placeholder="Insira sua cidade">
+                    <br> <span class="form-validation-false" id="msg_cidade_validation_register"></span>
 
                 </div>
 
@@ -89,8 +89,8 @@
                     <img src="img/Cadastro/bairro.png">
                     Bairro: <br>
                     <input id="input_cadastro_bairro" onkeyup="validacao_bairro_register()"
-                    placeholder="Insira seu bairro">
-                    <br>  <span class="form-validation-false" id="msg_bairro_validation_register"></span>
+                        placeholder="Insira seu bairro">
+                    <br> <span class="form-validation-false" id="msg_bairro_validation_register"></span>
 
                 </div>
 
@@ -101,28 +101,28 @@
                     <img src="img/Cadastro/email.png">
                     E-mail: <br>
                     <input id="input_cadastro_email" onkeyup="validacao_email_register()"
-                    placeholder="Insira o e-mail da empresa">
-                    <br>  <span class="form-validation-false" id="msg_email_validation_register"></span>
-                    
+                        placeholder="Insira o e-mail da empresa">
+                    <br> <span class="form-validation-false" id="msg_email_validation_register"></span>
+
                 </div>
 
 
                 <div class="div_input">
                     <img src="img/cadastro/senha.png">
                     Senha: <br>
-                    <input type="password" id="input_cadastro_senha"  onkeyup="validacao_senha_register()"
-                    placeholder="Insira sua senha">
-                    <br>  <span class="form-validation-false" id="msg_senha_validation_register"></span>
-               
+                    <input type="password" id="input_cadastro_senha" onkeyup="validacao_senha_register()"
+                        placeholder="Insira sua senha">
+                    <br> <span class="form-validation-false" id="msg_senha_validation_register"></span>
+
                 </div>
 
             </div>
 
-            
-                <span class="msg-cadastrar">Já é cadastrado? <a href="Newlogin.html"> <b> Entrar </b></a></span>  
+
+            <span class="msg-cadastrar">Já é cadastrado? <a href="Newlogin.html"> <b> Entrar </b></a></span>
             <button onclick="cadastrar()">Cadastrar</button>
 
-            
+
         </div>
 
 
@@ -211,36 +211,36 @@
     // Expressões Regulares
     //Expressão Nome
     var nomeReg = /^[À-úA-z ]{3,35}$/;
-     //Expressão Cnpj
+    //Expressão Cnpj
     var cnpjReg = /^[0-9]{2}.?[0-9]{3}.?[0-9]{3}.?[0-9]{4}\-?[0-9]{2}$/;
-     //Expressão cep
+    //Expressão cep
     var cepReg = /^[0-9]{5}-.?[0-9]{3}$/;
-     //Expressão cidade
+    //Expressão cidade
     var cidadeReg = /^[À-úA-z ]{3,100}$/;
-     //Expressão endereco
+    //Expressão endereco
     var enderecoReg = /^[À-úA-z0-9 , ?]{3,100}$/;
-     //Expressão bairro
+    //Expressão bairro
     var bairroReg = /^[À-úA-z ]{3,100}$/;
-     // Expressão Email
-     var emailReg = /^([À-úA-z0-9._-]+@[a-z0-9._-]+\.[A-z0-9_-]+)$/;
-     //Expressão Senha
+    // Expressão Email
+    var emailReg = /^([À-úA-z0-9._-]+@[a-z0-9._-]+\.[A-z0-9_-]+)$/;
+    //Expressão Senha
     var senhaReg = /^(?=.*[0-9]{3})(?=.*[A-z]{1})[A-z0-9]{6,}$/;
 
 
-    
+
     function validacao_name_register() {
         var nome = input_cadastro_nomeempresa.value;
         // Verifica Nome
         if (nome.match(nomeReg)) {
             msg_name_validation_register.innerHTML = '';
             input_cadastro_nomeempresa.style.border = '1px solid green ';
-            input_cadastro_nomeempresa.style.color =" green";
+            input_cadastro_nomeempresa.style.color = " green";
         } else {
             msg_name_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
             input_cadastro_nomeempresa.style.color = "red";
-            input_cadastro_nomeempresa.style.border = '1px solid red' ;
-            
-    }
+            input_cadastro_nomeempresa.style.border = '1px solid red';
+
+        }
     }
 
     function validacao_cnpj_register() {
@@ -249,13 +249,13 @@
         if (cnpj.match(cnpjReg)) {
             msg_cnpj_validation_register.innerHTML = '';
             input_cadastro_cnpj.style.border = '1px solid green ';
-            input_cadastro_cnpj.style.color =" green";
+            input_cadastro_cnpj.style.color = " green";
         } else {
             msg_cnpj_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
             input_cadastro_cnpj.style.color = "red";
-            input_cadastro_cnpj.style.border = '1px solid red' ;
-            
-            
+            input_cadastro_cnpj.style.border = '1px solid red';
+
+
         }
     }
 
@@ -265,12 +265,12 @@
         if (cep.match(cepReg)) {
             msg_cep_validation_register.innerHTML = '';
             input_cadastro_cep.style.border = '1px solid green ';
-            input_cadastro_cep.style.color =" green";
+            input_cadastro_cep.style.color = " green";
         } else {
             msg_cep_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
             input_cadastro_cep.style.color = "red";
-            input_cadastro_cep.style.border = '1px solid red' ;
-            
+            input_cadastro_cep.style.border = '1px solid red';
+
         }
     }
     function validacao_endereco_register() {
@@ -279,26 +279,26 @@
         if (endereco.match(enderecoReg)) {
             msg_endereco_validation_register.innerHTML = '';
             input_cadastro_endereco.style.border = '1px solid green ';
-            input_cadastro_endereco.style.color =" green";
+            input_cadastro_endereco.style.color = " green";
         } else {
             msg_endereco_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
             input_cadastro_endereco.style.color = "red";
-            input_cadastro_endereco.style.border = '1px solid red' ;
+            input_cadastro_endereco.style.border = '1px solid red';
         }
     }
 
 
-     function validacao_cidade_register() {
+    function validacao_cidade_register() {
         var cidade = input_cadastro_cidade.value;
         // Verifica cidade
         if (cidade.match(cidadeReg)) {
             msg_cidade_validation_register.innerHTML = '';
             input_cadastro_cidade.style.border = '1px solid green ';
-            input_cadastro_cidade.style.color =" green";
+            input_cadastro_cidade.style.color = " green";
         } else {
             msg_cidade_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
             input_cadastro_cidade.style.color = "red";
-            input_cadastro_cidade.style.border = '1px solid red' ;
+            input_cadastro_cidade.style.border = '1px solid red';
         }
     }
 
@@ -308,11 +308,11 @@
         if (bairro.match(bairroReg)) {
             msg_bairro_validation_register.innerHTML = '';
             input_cadastro_bairro.style.border = '1px solid green ';
-            input_cadastro_bairro.style.color =" green";
+            input_cadastro_bairro.style.color = " green";
         } else {
             msg_bairro_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
             input_cadastro_bairro.style.color = "red";
-            input_cadastro_bairro.style.border = '1px solid red' ;
+            input_cadastro_bairro.style.border = '1px solid red';
         }
     }
     // Validacao email
@@ -322,11 +322,11 @@
         if (email.match(emailReg)) {
             msg_email_validation_register.innerHTML = '';
             input_cadastro_email.style.border = '1px solid green ';
-            input_cadastro_email.style.color =" green";
+            input_cadastro_email.style.color = " green";
         } else {
             msg_email_validation_register.innerHTML = '<b style="color: red;"> Verifique o campo preenchido </b>';
             input_cadastro_email.style.color = "red";
-            input_cadastro_email.style.border = '1px solid red' ;
+            input_cadastro_email.style.border = '1px solid red';
         }
     }
 
@@ -339,10 +339,10 @@
             input_cadastro_senha.style.border = '2px solid green';
             input_cadastro_senha.style.color = "green";
         } else {
-            msg_senha_validation_register.innerHTML = 
-            '<b style="color: red;"> A senha deve conter pelo menos 6 dígitos,<br>1 letra maiúscula, <br>1 letra minúscula <br>e 3 números </b>';
+            msg_senha_validation_register.innerHTML =
+                '<b style="color: red;"> A senha deve conter pelo menos 6 dígitos,<br>1 letra maiúscula, <br>1 letra minúscula <br>e 3 números </b>';
             input_cadastro_senha.style.color = "red";
-            input_cadastro_senha.style.border = '2px solid red ' ;
+            input_cadastro_senha.style.border = '2px solid red ';
         }
     }
 
@@ -358,9 +358,31 @@
 
     }
 
+    function getinfo(){
+        fetch("/usuarios/getinfo").then(function (res1) {
+            if (res1.ok) {
+                res1.json().then(function (res1) {
+                    console.log("Dados recebidos: ", JSON.stringify(res1));
+                    dado = res1[res1.indexOf(':') + 1]
+                    console.log(dado.id_empresa)
+                    sessionStorage.ID_EMPRESA = dado.id_empresa;
+                    sessionStorage.NOME_EMPRESA = dado.nome_empresa;
+                }
+                );
+            } else {
+                throw ('Houve um erro ao pegar info!');
+            }
+        }).catch(function (res1) {
+            console.error(res1);
+        });
+    }
+
+    function armazenar(){
+        sessionStorage.ID_EMPRESA = null;
+        sessionStorage.NOME_EMPRESA = null;
+    }
+
     function cadastrar() {
-
-
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = input_cadastro_nomeempresa.value
@@ -372,23 +394,10 @@
         var emailVar = input_cadastro_email.value
         var senhaVar = input_cadastro_senha.value
 
-
-
-
-
-
-        if (nomeVar == "" || cnpjVar == "" || cepVar == "" || enderecoVar == "" || cidadeVar == ""||
-       bairroVar == "" || emailVar == "" || senhaVar == "") {
+        if (nomeVar == "" || cnpjVar == "" || cepVar == "" || enderecoVar == "" || cidadeVar == "" ||
+            bairroVar == "" || emailVar == "" || senhaVar == "") {
             alert('Todos os campos são OBRIGATÓRIOS')
-            return false;
-
         } else {
-
-
-
-
-
-
 
             // Enviando o valor da nova input
 
@@ -412,11 +421,13 @@
             }).then(function (resposta) {
 
                 console.log("resposta: ", resposta);
-
                 if (resposta.ok) {
-
-                    window.location = "login.html";
-
+                    resposta.json().then(json => {
+                        getinfo();
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+                        window.location = "novo_usuario.html";
+                    });
 
                 } else {
                     alert('Houve um erro ao tentar realizar o cadastro, verifique os campos preenchidos!')
@@ -426,30 +437,25 @@
                 console.log(`#ERRO: ${resposta}`);
 
             });
-
-            return false;
         }
 
 
     }
 
     function viacep() {
-
-fetch(`https://viacep.com.br/ws/${input_cadastro_cep.value}/json/`, {
-    method: "GET",
-    mode: "cors"
-}).then(function (resposta) {
-    console.log(resposta)
-    resposta.json().then(function(data) {
-        console.log(data)
-        input_cadastro_endereco.value = data.logradouro;
-        input_cadastro_bairro.value = data.bairro;
-        input_cadastro_cidade.value = data.localidade
-    })
-
-}).catch(function (erro) {
-    console.log(erro)
-})
-}
-
+        fetch(`https://viacep.com.br/ws/${input_cadastro_cep.value}/json/`, {
+            method: "GET",
+            mode: "cors"
+        }).then(function (resposta) {
+            console.log(resposta)
+            resposta.json().then(function (data) {
+                console.log(data)
+                input_cadastro_endereco.value = data.logradouro;
+                input_cadastro_bairro.value = data.bairro;
+                input_cadastro_cidade.value = data.localidade
+            })
+        }).catch(function (erro) {
+            console.log(erro)
+        })
+    }
 </script>
