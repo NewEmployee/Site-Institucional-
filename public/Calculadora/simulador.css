@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html,
 body,
 div,
@@ -90,8 +91,17 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer,
-header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -99,11 +109,15 @@ body {
   display: flex;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -194,22 +208,17 @@ table {
 }
 
 .bntCalcular:hover {
-    transition: 0.8s;
-    width: 40%;
-    background: #ffffff;
-    color: #0282f8;
+  transition: 0.8s;
+  width: 40%;
+  background: #ffffff;
+  color: #0282f8;
 }
 
 input {
   text-align: center;
 }
-
-
-
-
-
 .div_Nome {
-  width: 30vw; 
+  width: 30vw;
   height: 20vh;
   display: flex;
   background-color: white;
@@ -239,12 +248,15 @@ input {
   margin-top: 2%;
 }
 
-.div_pai_info, .div_Nome, .div_chart, .div_dinheiro {
+.div_pai_info,
+.div_Nome,
+.div_chart,
+.div_dinheiro {
   border-radius: 12px;
   margin-left: 1%;
   margin-top: 1%;
   float: left;
-  
+
 }
 
 #informacoes_Princ {
@@ -254,10 +266,10 @@ input {
 
 
 .div_pai_info {
-  width: 41vw; 
+  width: 41vw;
   height: 20vh;
   background-color: white;
-  display: flex; 
+  display: flex;
   justify-content: space-around;
   align-items: center;
   border: 1px solid #ebebeb;
@@ -278,11 +290,11 @@ input {
   height: 50%;
   width: 30%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
   font-size: 20px;
-  
+
 }
 
 .p_info {
@@ -292,8 +304,8 @@ input {
 
 
 
-.div_chart{
-  width: 35.45%; 
+.div_chart {
+  width: 35.45%;
   height: 42%;
   background-color: white;
   display: flex;
@@ -307,7 +319,7 @@ input {
 
 
 #div_dinheiro {
-  width: 60%; 
+  width: 60%;
   height: 30%;
   margin-left: 7%;
   flex-direction: row;
@@ -321,8 +333,8 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  
+
+
 }
 
 #img_duvida {
@@ -333,8 +345,8 @@ input {
   float: right;
 }
 
-#passar_mouse:hover #mostrar{
-  display:block;
+#passar_mouse:hover #mostrar {
+  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,7 +361,7 @@ input {
   border: 1px solid #0282f8;
   box-sizing: border-box;
   border-radius: 12px;
-  border-top-left-radius:0px ;
+  border-top-left-radius: 0px;
   color: white;
   display: none;
 }
@@ -358,9 +370,9 @@ input {
   color: rgb(253, 86, 86);
 }
 
-.h2_depois{
+.h2_depois {
   color: rgb(58, 137, 255);
-  
+
 }
 
 #input_tarefas_custo {

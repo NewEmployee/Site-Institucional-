@@ -18,8 +18,7 @@
           src="https://cdn.discordapp.com/attachments/951968512044322831/953450184208175145/logo.png"
         />
         <p class="titulo">
-          Insira as informações para calcularmos o qual sua
-          produtividade !
+          Insira as informações para o cálculo de produtividade 
         </p>
 
         <div class="alerta_erro">
@@ -31,14 +30,14 @@
         <h3 class="textInput" id="h3_nome"> Nome da empresa:</h3>
         <input class="input" type="text" id="nomeE" />
 
-        <h3 class="textInput" id="h3_funcionarios"> Quantidade de funcionarios:</h3>
+        <h3 class="textInput" id="h3_funcionarios"> Quantidade de funcionários:</h3>
         <input class="input" type="number" id="qntdFuncionario" />
 
         <h3 class="textInput" id="h3_jornada">Jornada diaria em média:
           <div id="passar_mouse">
             <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
               <div id="mostrar">
-                Quantas horas trabalha seu funcionario diariamente.
+Jornada diária
               </div>
           </div>
         </h3>
@@ -48,21 +47,21 @@
         <input class="input" type="number" id="diasTrabalhados" />
 
         
-        <h3 class="textInput" id="h3_tarefas"> Quantas tarefas são realizadas diariamente:
+        <h3 class="textInput" id="h3_tarefas"> Quantidade de tarefas realizadas diariamente:
         <div id="passar_mouse">
           <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
             <div id="mostrar">
-              Exemplo:<br>cada funcionário produz 20 tênis por dia
+              Exemplo:<br>produzimos em média 20 tênis por dia
             </div>
         </div>
         </h3>
         <input class="input" type=  "number" id="input_tarefas" />
 
-        <h3 class="textInput" id="h3_tarefas_custo"> Quanto custa uma tarefa em média:
+        <h3 class="textInput" id="h3_tarefas_custo"> Valor da diária média:
           <div id="passar_mouse">
             <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Interroga%C3%A7%C3%A3o-com-Fundo-Transparente.png" id="img_duvida">
               <div id="mostrar">
-                Exemplo:<br>um tênis vale 100 reais
+                Exemplo:<br>um tênis em média, custa 100 reais
               </div>
           </div>
         </h3>
@@ -98,19 +97,19 @@
 
         <div class="div_pai_info">
             <div class="div_info">
-              <h2 class="h2_info">Horas de trabalho<br><p class="p_info" id="p_horas"></p></h2>
+              <h2 class="h2_info">Horas de trabalho/mensal<br><p class="p_info" id="p_horas"></p></h2>
               <!-- <h2 class="h2_info">Horas de abstenção <br><p class="p_info" id="p_abstencao"></p></h2> -->
-              <h2 class="h2_info">Valor da tarefa <br><p class="p_info" id="p_valor"></p></h2>
+              <h2 class="h2_info">Valor da diária/mensal<br><p class="p_info" id="p_valor"></p></h2>
             </div>
         </div>
 
         <div class="div_chart" id="div_chart1">
-          <div>Quantidade de itens produzidos por hora</div>
+          <div>Quantidade de itens produzidos por dia/média</div>
           <canvas id="chart1"></canvas>
         </div>
 
         <div class="div_chart" id="div_chart2">
-          <div>Quanto ganho mensalmente</div>
+          <div>Ganho mensal em média</div>
           <canvas id="chart2"></canvas>
         </div>
         

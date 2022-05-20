@@ -78,16 +78,16 @@
     // var perca_antes = salarioHora * horasPerdidas
     // var perca_depois = salarioHora * (horasPerdidas  * 0.49)
 
-    h2_bemvindo.innerHTML = `Bem vindo !`
+    h2_bemvindo.innerHTML = `Bem vindo, `
     h2_NomeEmpresa.innerHTML = `${nome}`
-    p_horas.innerHTML = `${horasMes} H`
+    p_horas.innerHTML = `${horasMes}h`
     // p_abstencao.innerHTML = `${horasPerdidas} H`
     p_valor.innerHTML= `R$ ${tarefa_custo.toFixed(2)}`
-    div_perca_antes.innerHTML = `Ganho em dinheiro: <br>R$ ${custo_antes.toFixed(2)}`
-    div_perca_depois.innerHTML = `Ganho em dinheiro: <br>R$ ${custo_depois.toFixed(2)}`
-    div_abs_antes.innerHTML = `Tarefas por hora: ${produtividade_antes.toFixed(2)} `
-    div_abs_depois.innerHTML = `Tarefas por hora: ${produtividade_depois.toFixed(2)} `
-    div_info_texto.innerHTML = `<br> Nossos serviços podem aumentar<br>em até 35% da produtividade.`
+    div_perca_antes.innerHTML = `Ganho mensal: <br>R$ ${custo_antes.toFixed(2)}`
+    div_perca_depois.innerHTML = `Ganho mensal: <br>R$ ${custo_depois.toFixed(2)}`
+    div_abs_antes.innerHTML = `Diária/média: ${produtividade_antes.toFixed(2)} `
+    div_abs_depois.innerHTML = `Diária/média  : ${produtividade_depois.toFixed(2)} `
+    div_info_texto.innerHTML = `<br> Nossos serviços podem aumentar<br>em até 35% da produtividade das squads.`
 
     document.getElementById("informacoes_Princ").style.visibility = 'visible';
 
@@ -100,7 +100,7 @@
     ];
   
     const data = {
-    labels: ['Itens por hora'],
+    labels: ['Itens diários'],
     datasets: [{
       // axis: 'y',
       label: 'Antes',
@@ -151,7 +151,7 @@
   ];
 
   const data2 = {
-    labels: ['Ganhos'],
+    labels: ['Ganhos Mensais'],
     datasets: [{
       axis: 'y',
       label: 'Antes',
