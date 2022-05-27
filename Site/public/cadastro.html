@@ -208,6 +208,14 @@
 
 
 <script>
+
+    
+function armazenar(){
+        sessionStorage.ID_EMPRESA = null;
+        sessionStorage.NOME_EMPRESA = null;
+    }
+
+        
     // Expressões Regulares
     //Expressão Nome
     var nomeReg = /^[À-úA-z ]{3,35}$/;
@@ -375,11 +383,6 @@
         }).catch(function (res1) {
             console.error(res1);
         });
-    }
-
-    function armazenar(){
-        sessionStorage.ID_EMPRESA = null;
-        sessionStorage.NOME_EMPRESA = null;
     }
 
     function cadastrar() {
