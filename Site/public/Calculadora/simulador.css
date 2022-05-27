@@ -378,3 +378,7 @@ input {
 #input_tarefas_custo {
   float: left;
 }
+
+.div_Nome, .div_pai_info, .div_chart{
+  box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 6px;
+}
