@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Red+Hat+Display&display=swap');
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 
-body{ 
+body {
     margin: 0;
-    padding: 0;     
+    padding: 0;
     display: block;
     scroll-behavior: smooth;
 
 }
 
 
-/* Tela inicial e Header */ 
-.inicio{
+/* Tela inicial e Header */
+.inicio {
     background-image: url(img/site/fundo.png);
     background-size: cover;
-    height: 100vh;  
+    height: 100vh;
     width: 100%;
 }
 
@@ -60,7 +60,7 @@ h1 a:hover {
     font-size: 45px;
 }
 
-.navbar a{
+.navbar a {
     text-decoration: none;
     font-family: 'Red Hat Display', sans-serif;
     color: white;
@@ -68,17 +68,17 @@ h1 a:hover {
     transition: 0.8s;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     font-size: 28px;
 }
 
-.nelogo{
+.nelogo {
     height: 60px;
 }
 
 
 
-.parte_baixo{   
+.parte_baixo {
     width: 100%;
     height: calc(96vh - 90px);
     display: flex;
@@ -89,7 +89,7 @@ h1 a:hover {
     margin-top: 8%
 }
 
-.slogan{
+.slogan {
     margin: 0;
     padding: 0;
     color: white;
@@ -101,12 +101,13 @@ h1 a:hover {
     font-weight: 600;
 }
 
-.div_btn{
+.div_btn {
     display: flex;
-    column-gap: 100px
+    column-gap: 100px;
+   
 }
 
-.btn_inicio{
+.btn_inicio {
     background-color: rgba(240, 248, 255, 0);
     color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -121,9 +122,34 @@ h1 a:hover {
     font-weight: bold;
 }
 
-.btn_inicio:hover{
-    background-color:#0281f87c ;
+.btn_inicio:hover {
+    background-color: #0281f87c;
 
+}
+
+.help_desk {
+    height: 70px;
+    width: 70px;
+    background-color: #082e52;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 60%;
+    margin-top: 5%;
+    position: fixed;
+    z-index: 2;
+    background-image: url(img/icone_help_desk-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: solid #0282F8 2px;
+    transition: all 0.6s  cubic-bezier(0.165, 0.84, 0.44, 1);
+   
+
+}
+
+.help_desk:hover{
+    transform: scale(1.20,1.20);
+    transition: all 0.3s;
 }
 
 
@@ -138,8 +164,8 @@ h1 a:hover {
 
 }
 
-.titulo_qs{
-    width:80vw;
+.titulo_qs {
+    width: 80vw;
     height: 28%;
     font-size: 46px;
     font-family: 'Red Hat Display', sans-serif;
@@ -150,7 +176,7 @@ h1 a:hover {
 }
 
 
-.conteudo_qs{
+.conteudo_qs {
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
@@ -170,13 +196,13 @@ h1 a:hover {
 
 }
 
-.vec_simulador{
+.vec_simulador {
     display: flex;
     justify-content: flex-end;
-    
+
 }
 
-.header_simulador{
+.header_simulador {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,7 +217,7 @@ h1 a:hover {
     font-size: 46px;
     font-family: 'Red Hat Display', sans-serif;
     color: black;
-    
+
 }
 
 .conteudo_simulador {
@@ -209,7 +235,7 @@ h1 a:hover {
     margin-top: 6%;
 }
 
-.btn{ 
+.btn {
     color: black;
 
     font-size: 24px;
@@ -223,11 +249,11 @@ h1 a:hover {
     font-weight: bold;
     align-self: center;
     margin-top: 10%;
-    
+
 }
 
-.btn:hover{
-    background-color:#0281f87c ;
+.btn:hover {
+    background-color: #0281f87c;
 
 }
 
@@ -240,38 +266,41 @@ h1 a:hover {
 
 }
 
-.vec1_servicos{
-    position:absolute;
+.vec1_servicos {
+    position: absolute;
     z-index: -1;
     right: 0;
     height: 100vh;
 }
-.vec2_servicos{
-    position:absolute;
+
+.vec2_servicos {
+    position: absolute;
     margin-top: 45%;
     z-index: -1;
     height: 60vh;
 }
-.lampada{
+
+.lampada {
     position: absolute;
     right: 25px;
     bottom: 25px;
     height: 50px;
 }
 
-.titulo_servicos{
+.titulo_servicos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
 }
-.titulo_servicos b{
+
+.titulo_servicos b {
     font-family: 'Red Hat Display', sans-serif;
     font-size: 46px;
 }
 
-.titulo_servicos span{
+.titulo_servicos span {
     font-size: 24px;
     font-family: 'Red Hat Display', sans-serif;
 }
@@ -291,13 +320,13 @@ h1 a:hover {
 .img_produtividade {
     float: left;
     width: 40%;
-    background-color:#F2F2F2;
+    background-color: #F2F2F2;
     border: 2px #F2F2F2 solid;
     border-radius: 16px;
     height: 100%;
 }
 
-.txt_produtividade{
+.txt_produtividade {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -329,7 +358,7 @@ h1 a:hover {
 
 }
 
-.agenda{
+.agenda {
     position: absolute;
     right: 25px;
     bottom: 25px;
@@ -340,12 +369,12 @@ h1 a:hover {
     float: left;
     width: 50%;
     height: 100%;
-    background-color:#F2F2F2;
+    background-color: #F2F2F2;
     border: 2px #F2F2F2 solid;
     border-radius: 16px;
 }
 
-.txt_ambiente{
+.txt_ambiente {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,8 +385,8 @@ h1 a:hover {
 .txt_ambiente b {
     font-size: 44px;
     font-family: 'Red Hat Display', sans-serif;
-    
-   
+
+
 }
 
 
@@ -371,7 +400,7 @@ h1 a:hover {
 
 
 
-/* Tela Valores Da Empresa*/ 
+/* Tela Valores Da Empresa*/
 .valores {
     max-height: 100vh;
     height: 100vh;
@@ -418,7 +447,7 @@ h1 a:hover {
     width: 300px;
     height: 415px;
     float: left;
-    
+
 
     background: #FFFFFF;
     border: 2px solid rgba(50, 50, 50, 0.2);
@@ -430,7 +459,7 @@ h1 a:hover {
     width: 300px;
     height: 415px;
     float: right;
-    
+
 
     background: #FFFFFF;
     border: 2px solid rgba(50, 50, 50, 0.2);
@@ -519,7 +548,7 @@ h1 a:hover {
 }
 
 .div_fundo_equipe {
-    background-image:url(img/site/fundo_equipe.png);
+    background-image: url(img/site/fundo_equipe.png);
     background-size: cover;
     height: 30%;
     width: 100%;
@@ -528,7 +557,7 @@ h1 a:hover {
 .container_valores {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 #div_titulo_equipe {
@@ -565,10 +594,11 @@ h1 a:hover {
     justify-content: space-around;
 }
 
-.imagens_equipe{
+.imagens_equipe {
     height: 180px;
     border-radius: 45%;
 }
+
 .container_Fotos2 {
     height: 5vh;
     margin-top: 30%;
@@ -576,12 +606,13 @@ h1 a:hover {
     justify-content: space-around;
 }
 
-#Gêrencia{
+#Gêrencia {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 4%;
 }
+
 .equipe_fotos {
     width: 260px;
     height: 350px;
@@ -593,7 +624,7 @@ h1 a:hover {
     border-radius: 40px;
 }
 
-.ul_imagens_link{
+.ul_imagens_link {
     width: 180px;
     display: flex;
     list-style: none;
@@ -680,7 +711,8 @@ h1 a:hover {
 }
 
 
-.input_esquerda_contate, .input_direita_contate {
+.input_esquerda_contate,
+.input_direita_contate {
     width: 35%;
     height: 60%;
     display: flex;
@@ -709,17 +741,21 @@ h1 a:hover {
     height: 80%;
 }
 
-    
-.div_nome_contate, .div_email_contate, .div_nome_empresa_contate, .div_cidade_contate, .div_cnpj_contate{
+
+.div_nome_contate,
+.div_email_contate,
+.div_nome_empresa_contate,
+.div_cidade_contate,
+.div_cnpj_contate {
     justify-content: center;
     align-items: center;
     margin-top: 5%;
 }
 
 .div_esquerda_contate {
-   display: flex;
-   align-items: center;
-   margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1%;
 }
 
 .input_esquerda_contate img {
@@ -731,7 +767,7 @@ h1 a:hover {
 }
 
 .mostrar_mensagem {
-    background-color:  #e0e0e0e8;
+    background-color: #e0e0e0e8;
     width: 20px;
     height: 20px;
     position: relative;
@@ -745,10 +781,10 @@ h1 a:hover {
     padding: 15px;
     width: 30%;
     font-size: 1.2em;
-    font-weight: bold;   
+    font-weight: bold;
     border-style: solid;
-    border-color: black; 
-    transition: 0.5s;   
+    border-color: black;
+    transition: 0.5s;
 }
 
 .header_contate a {
@@ -757,21 +793,21 @@ h1 a:hover {
 }
 
 .caixa_branca button:hover {
-    background-color:#0282F8;
+    background-color: #0282F8;
     transition: 1s;
     width: 25%;
 }
 
 .div_button_contate {
-    width: 40%; 
+    width: 40%;
     margin-left: 30%;
     display: flex;
     justify-content: space-around;
 }
 
-.div_button_contate button{ 
+.div_button_contate button {
     display: flex;
-    justify-content: center ;
+    justify-content: center;
 }
 
 
@@ -787,7 +823,7 @@ h1 a:hover {
 
 .coluna_preta2 {
     background-color: black;
-    height:100%;
+    height: 100%;
     display: flex;
 }
 
@@ -810,7 +846,7 @@ h1 a:hover {
 .titulos_final {
     font-size: 30px;
     list-style: none;
-    font-weight: bold;  
+    font-weight: bold;
 }
 
 .juridico_final {

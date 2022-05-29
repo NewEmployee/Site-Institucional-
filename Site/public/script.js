@@ -6,3 +6,8 @@ window.onscroll = function () {
         header.style = " background-color: black;  ";
     }
 }   
+
+
+function entrar_help_desk(){
+    window.location = "https://app.pipefy.com/public/form/WzMtrPNx"
+}
