@@ -115,7 +115,6 @@
 
     function sair_tela(){
         window.location = "index.html";
-
     }
 
     function novo_usuario(){
@@ -160,39 +159,42 @@ function atualizarPg(idSensor) {
         });
     
     }
+
+
     function trocar_Cor(localidade, card){
         var cor = ""
         var txt_alerta = ""
         if(localidade < 22.5 && localidade > 20.5) {
-            cor = "#52c352"
-            txt_alerta = "Sua temperatura está OK"
+            // verde
+            cor = "#1cb807ad"
+            borda = "#1cb807"
         }
         else if(localidade < 23.1 && localidade > 20.5) {
-            cor = "#e8e065"
-            txt_alerta = "Sua temperatura está AQUECENDO"
+            // amarelo
+            cor = "#f8e329b2"
+            borda = "#c2b117"
         }
         else if(localidade > 23) {
-            cor = "#e87b83"
-            txt_alerta = "Sua temperatura está MUITO ALTA"
+            // vermelho
+            cor = "#ff40409d"
+            borda = "#df120bd2"
         } 
         else if(localidade > 19.9) {
-            cor = "#448dca"
-            txt_alerta = "Sua temperatura está ESFRIANDO"
+            // azul
+            cor = "#0768b8ad"
+            borda = "#0768b8"
         }
         else {
-            cor = "#784bca"
-            txt_alerta = "Sua temperatura está CONGELANDO"
+            // roxo
+            cor = "#5407b8ad"
+            borda = "#5407b8"
         }
         // texto_alerta.innerHTML = txt_alerta
-        if(card == 1){
-            local_1.style.backgroundColor = cor
-        } else if (card == 2){
-            local_1.style.backgroundColor = cor
-        } else if (card == 3){
-            local_1.style.backgroundColor = cor
-        } else if (card == 4){
-            local_1.style.backgroundColor = cor
-        }
+
+        const card_Local = document.getElementById('local_' + card);
+        console.log(card_Local)
+        card_Local.style.backgroundColor = cor
+        card_Local.style.borderColor = cor
         
     }
 
