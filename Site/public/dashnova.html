@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="imagex/png" href="img/icon.ico">
 </head>
 
-<body  onload="nome_do_usuario(), nome_da_empresa()">
+<body  onload="nome_do_usuario(), nome_da_empresa(), atualizarPg(1), atualizarPg(2), atualizarPg(3), atualizarPg(4)">
 
 <div class="main">
     
@@ -122,5 +122,79 @@
         window.location = "novo_usuario.html";
     }
 
+    let proximaAtualizacao;
+
+function atualizarPg(idSensor) {
+
+    fetch(`/medidas/tempo-real/${idSensor}`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (novoRegistro) {
+
+                console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+
+                if(idSensor == 1){
+                    temp_aquario_1.innerHTML = (novoRegistro[0].valor_registro).toFixed(2) + "ºC"
+                    trocar_Cor(novoRegistro[0].valor_registro, 1)
+                } else if (idSensor == 2){
+                    temp_aquario_2.innerHTML = (novoRegistro[0].valor_registro).toFixed(2) + "ºC"
+                    trocar_Cor(novoRegistro[0].valor_registro, 2)
+                } else if (idSensor == 3){
+                    temp_aquario_3.innerHTML = (novoRegistro[0].valor_registro).toFixed(2) + "ºC"
+                    trocar_Cor(novoRegistro[0].valor_registro, 3)
+                } else if (idSensor == 4){
+                    temp_aquario_4.innerHTML = (novoRegistro[0].valor_registro).toFixed(2) + "ºC"
+                    trocar_Cor(novoRegistro[0].valor_registro, 4)
+                }
+
+                // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                proximaAtualizacao = setTimeout(() => atualizarPg(idSensor), 2000);
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+            // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+            proximaAtualizacao = setTimeout(() => atualizarPg(idSensor), 2000);
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
     
+    }
+    function trocar_Cor(localidade, card){
+        var cor = ""
+        var txt_alerta = ""
+        if(localidade < 22.5 && localidade > 20.5) {
+            cor = "#52c352"
+            txt_alerta = "Sua temperatura está OK"
+        }
+        else if(localidade < 23.1 && localidade > 20.5) {
+            cor = "#e8e065"
+            txt_alerta = "Sua temperatura está AQUECENDO"
+        }
+        else if(localidade > 23) {
+            cor = "#e87b83"
+            txt_alerta = "Sua temperatura está MUITO ALTA"
+        } 
+        else if(localidade > 19.9) {
+            cor = "#448dca"
+            txt_alerta = "Sua temperatura está ESFRIANDO"
+        }
+        else {
+            cor = "#784bca"
+            txt_alerta = "Sua temperatura está CONGELANDO"
+        }
+        // texto_alerta.innerHTML = txt_alerta
+        if(card == 1){
+            local_1.style.backgroundColor = cor
+        } else if (card == 2){
+            local_1.style.backgroundColor = cor
+        } else if (card == 3){
+            local_1.style.backgroundColor = cor
+        } else if (card == 4){
+            local_1.style.backgroundColor = cor
+        }
+        
+    }
+
+
 </script>
