@@ -11,30 +11,31 @@
     <script src="funcoes.js"></script>
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 </head>
-<body onload = obterDadosGrafico(1)>
+<body onload="nome_do_usuario(), nome_da_empresa(), obterDadosGrafico(1)">
 
     <div class="main">
         <img class="iconeNE" src="img/icon.ico">
     
-        <p class="bemvindo">Bem vindo !</p>
+        <h1><span id="empresa" style="color: black;"></span></h1>
+        <p class="bemvindo">Bem vindo <span id="usuario"></span>!</p>
     
         <button  onclick="mudar_tela()" class="botoes" id="botao_menu1">Locais</button>
     
         <button class="botoes" id="botao_menu2">Gráficos</button>
     
+        <button onclick="novo_usuario()" class="botoes">Novo usúario</button> 
+        
         <button onclick="sair_tela()" class="botoes"  id="sair_menu">Sair</button>
-    
-    
     
     </div>
 
     <div class="dash">
         <div class="btns-dash">
             <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-            <button class="btn-chart" onclick="obterDadosGrafico(1)">Sala 1</button>
-            <button class="btn-chart" onclick="obterDadosGrafico(2)">Sala 2</button>
-            <button class="btn-chart" onclick="obterDadosGrafico(3)">Sala 3</button>
-            <button class="btn-chart" onclick="obterDadosGrafico(4)">Sala 4</button>
+            <button class="btn-chart" onclick="parar_Piscar(), obterDadosGrafico(1)">Sala 1</button>
+            <button class="btn-chart" onclick="parar_Piscar(), obterDadosGrafico(2)">Sala 2</button>
+            <button class="btn-chart" onclick="parar_Piscar(), obterDadosGrafico(3)">Sala 3</button>
+            <button class="btn-chart" onclick="parar_Piscar(), obterDadosGrafico(4)">Sala 4</button>
         </div>
         <div class="graph">
             <div id="grafico">
@@ -58,6 +59,13 @@
 </html>
 
 <script>
+function nome_do_usuario(){
+    usuario.innerHTML = sessionStorage.NOME_USUARIO
+}
+
+function nome_da_empresa(){
+    empresa.innerHTML = sessionStorage.NOME_EMPRESA
+}
 
 function mudar_tela(){
     window.location = "dashnova.html"
@@ -65,6 +73,10 @@ function mudar_tela(){
 
 function sair_tela(){
     window.location = "index.html"
+}
+
+function novo_usuario(){
+    window.location = "novo_usuario.html";
 }
 
 
@@ -112,6 +124,7 @@ function obterDadosGrafico(idSensor) {
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     var count = 1;
+    var myinterval = ''
     function plotarGrafico(resposta, idSensor) {
         console.log('iniciando plotagem do gráfico...');
         
@@ -164,17 +177,16 @@ function obterDadosGrafico(idSensor) {
         texto_alerta.style.color = cor
 
       
-        setInterval(function(){
-        if(count == 1){
-            texto_alerta.style.color = cor
-            count = 2
-        }
-        else {
-            texto_alerta.style.color = "transparent"
-            count = 1
-
-        }
-        },800)
+        myinterval = setInterval(function piscar_Letra(){
+            if(count == 1){
+                texto_alerta.style.color = cor
+                count = 2
+            }
+            else {
+                texto_alerta.style.color = "transparent"
+                count = 1
+            }
+        }, 800);
 
 
         console.log(JSON.stringify(dados));
@@ -213,6 +225,9 @@ function obterDadosGrafico(idSensor) {
         setTimeout(() => atualizarGrafico(idSensor, dados), 2000);
     }
 
+function parar_Piscar() {
+    clearInterval(myinterval);
+}
 // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
 // buscando a última medida inserida em tabela contendo as capturas, 
 

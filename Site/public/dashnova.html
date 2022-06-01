@@ -14,16 +14,16 @@
 <div class="main">
     
     <img class="iconeNE" src="img/icon.ico">
-    <span id="empresa" style="color: black;"></span>
+    <h1><span id="empresa" style="color: black;"></span></h1>
     <p class="bemvindo">Bem vindo <span id="usuario"></span>!</p>
 
     <button id="botao_menu1" class="botoes">Locais</button>
 
     <button onclick="mudar_tela()" class="botoes" id="botao_menu2">Gráficos</button>
 
-    <button onclick="sair_tela()" class="botoes" id="sair_menu">Sair</button>
-
     <button onclick="novo_usuario()" class="botoes">Novo usúario</button> 
+    
+    <button onclick="sair_tela()" class="botoes" id="sair_menu">Sair</button>
 
     
 
@@ -63,32 +63,24 @@
 
     <div class="cards">
         <div class="card" id="local_1" >
-            <h1>Local 1</h1>
-            <div class="temperatura">
-                <p id="temp_aquario_1">26°C</p>
-            </div>
+            <h1>Local 1 <p id="temp_aquario_1">26°C</p></h1>
+            <div class="temperatura" id="texto_Alerta1"></div>
             <div class="cor-alerta" id="card_1"></div>
         </div>
         <div class="card" id="local_2">
-            <h1>Local 2</h1>
-            <div class="temperatura">
-                <p id="temp_aquario_2">21°C</p>
-            </div>
+            <h1>Local 2<p id="temp_aquario_2">21°C</p></h1>
+            <div class="temperatura" id="texto_Alerta2"></div>
             <div class="cor-alerta" id="card_2"></div>
 
         </div>
         <div class="card" id="local_3">
-            <h1>Local 3</h1>
-            <div class="temperatura">
-                <p id="temp_aquario_3">22.4°C</p>
-            </div>
+            <h1>Local 3<p id="temp_aquario_3">22.4°C</p></h1>
+            <div class="temperatura" id="texto_Alerta3"></div>
             <div class="cor-alerta" id="card_3"></div>
         </div>
         <div class="card" id="local_4">
-            <h1>Local 4</h1>
-            <div class="temperatura">
-                <p id="temp_aquario_4">23°C</p>
-            </div>
+            <h1>Local 4<p id="temp_aquario_4">23°C</p></h1>
+            <div class="temperatura" id="texto_Alerta4"></div>
             <div class="cor-alerta" id="card_4"></div>
         </div>
 
@@ -164,30 +156,36 @@ function atualizarPg(idSensor) {
     function trocar_Cor(localidade, card){
         var cor = ""
         var txt_alerta = ""
+        var div_alerta = ""
         if(localidade < 22.5 && localidade > 20.5) {
             // verde
             cor = "#1cb807ad"
             borda = "#1cb807"
+            div_alerta = "Tudo Tranquilo"
         }
         else if(localidade < 23.1 && localidade > 20.5) {
             // amarelo
             cor = "#f8e329b2"
             borda = "#c2b117"
+            div_alerta = "Cuidado talvez tenha que dar uma pequena diminuida na temperatura"
         }
         else if(localidade > 23) {
             // vermelho
             cor = "#ff40409d"
             borda = "#df120bd2"
+            div_alerta = "Diminua a temperatura do ar condicionado rapidamente"
         } 
         else if(localidade > 19.9) {
             // azul
             cor = "#0768b8ad"
             borda = "#0768b8"
+            div_alerta = "Cuidado talvez tenha que dar uma pequena almentada na temperatura"
         }
         else {
             // roxo
             cor = "#5407b8ad"
             borda = "#5407b8"
+            div_alerta = "Aumente a temperatura do ar condicionado rapidamente"
         }
         // texto_alerta.innerHTML = txt_alerta
 
@@ -196,6 +194,8 @@ function atualizarPg(idSensor) {
         card_Local.style.backgroundColor = cor
         card_Local.style.borderColor = cor
         
+        const card_Alerta = document.getElementById('texto_Alerta' + card);
+        card_Alerta.innerHTML = div_alerta
     }
 
 
