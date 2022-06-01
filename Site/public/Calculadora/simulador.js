@@ -1,3 +1,4 @@
+
   function calcular() {
 
     var nome = nomeE.value
